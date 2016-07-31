@@ -30,3 +30,16 @@
 ```bash
 npm i
 ```
+
+## Theming Documentation
+
+For more information about how to theme Semantic-ui read the official [documentation](http://semantic-ui.com/usage/theming.html).
+
+
+## Credits
+
+This project uses and is heavily inspired by the following projects
+
+- [Ant Design](http://ant.design/), An enterprise-class UI design language and React-based implementation.
+
+- [Semantic UI](http://semantic-ui.com/), A development framework that helps create beautiful, responsive layouts using human-friendly HTML.
