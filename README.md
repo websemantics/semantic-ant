@@ -31,9 +31,9 @@
 npm i
 ```
 
-## Theming Documentation
+## Theming
 
-For more information about how to theme Semantic-ui read the official [documentation](http://semantic-ui.com/usage/theming.html).
+The [official documentation](http://semantic-ui.com/usage/theming.html) of Semantic-ui is a great resources that explains with examples how to work with themes.
 
 
 ## Credits
