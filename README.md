@@ -33,7 +33,7 @@ npm i
 
 ## Theming
 
-The [official documentation](http://semantic-ui.com/usage/theming.html) of Semantic-ui is a great resources that explains with examples how to work with themes.
+The [official documentation](http://semantic-ui.com/usage/theming.html) of Semantic-ui is a great resources that explains with examples how to work with themes. 
 
 
 ## Credits
@@ -42,4 +42,4 @@ This project uses and is heavily inspired by the following projects
 
 - [Ant Design](http://ant.design/), An enterprise-class UI design language and React-based implementation.
 
-- [Semantic UI](http://semantic-ui.com/), A development framework that helps create beautiful, responsive layouts using human-friendly HTML.
+- [Recreating GitHub](https://github.com/Semantic-Org/example-github), A Semantic UI project designed to showcase theming with examples to create a packaged theme, using component CSS overrides, and managing themes with `theme.config`.
