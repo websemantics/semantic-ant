@@ -27,7 +27,7 @@
 
 [Semantic Ant]http://websemantics.github.io/semantic-ant/ is a custom theme for building beautiful modern Web apps with the combined awesomeness of [Semantic-ui](http://semantic-ui.com/) framework and the elegant minimal styles of [Ant Design](http://ant.design/) for beautiful and responsive layouts</p>
 
-[Live demo](http://websemantics.github.io/semantic-ant/)
+### [Live demo](http://websemantics.github.io/semantic-ant/)
 
 
 ## Install

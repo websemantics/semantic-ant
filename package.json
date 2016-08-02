@@ -28,7 +28,7 @@
     "watch": "cd semantic && gulp",
     "deploy": "cd $npm_package_config_dir_dist && git push --force --quiet \"https://${GH_TOKEN}@${GH_REF}\" ${npm_package_config_deploy_branch} > /dev/null 2>&1 ",
     "deploy:init": "rm -rf $npm_package_config_dir_dist && mkdir -p ${npm_package_config_dir_dist}",
-    "deploy:copy": "cp -r ${npm_package_config_dir_src}css $npm_package_config_dir_dist && cp -r ${npm_package_config_dir_src}img $npm_package_config_dir_dist && cp -r ${npm_package_config_dir_src}js $npm_package_config_dir_dist && cp ${npm_package_config_dir_src}index.html $npm_package_config_dir_dist",
+    "deploy:copy": "cp -r ${npm_package_config_dir_src}assets $npm_package_config_dir_dist && cp ${npm_package_config_dir_src}index.html $npm_package_config_dir_dist",
     "predeploy": "npm run deploy:init -s && npm run deploy:copy -s && cd $npm_package_config_dir_dist && git init && git config user.name $npm_package_config_deploy_name && git config user.email $npm_package_config_deploy_email && git add -A . && git commit -am \"$npm_package_config_deploy_message\" "
   },
   "bugs": {
