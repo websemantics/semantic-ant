@@ -1,0 +1,23 @@
+
+/*******************************
+          Theme CSS
+*******************************/
+
+.ui.sidebar {
+  background-color: #FFFFFF;
+  padding: 1em;
+}
+
+.ui.sidebar .button + .button {
+  margin-top: 0.5em;
+}
+
+.alternate.menu {
+  display: none;
+}
+
+/* small fix to avoid having to recenter buttons in each theme */
+.ui.labeled.button > .button {
+  display: flex;
+  align-items: center;
+}

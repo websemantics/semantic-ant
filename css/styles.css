@@ -1,0 +1,132 @@
+/*******************************
+          Global CSS
+*******************************/
+
+body.pushable {
+    background: #FFF;
+}
+body.pushable> .pusher {
+    z-index: 0;
+    background: #ececec!important;
+}
+
+/*--------------
+  Global Styles
+---------------*/
+
+a {
+    color: #2db7f5!important;
+}
+a:hover b {
+    color: inherit;
+}
+.ui.grid {
+    width: 100%;
+}
+.ui.secondary.menu {
+    border-color: #FFF!important;
+}
+.ui.container {
+    padding: 0px 4%!important;
+    margin: 0px!important;
+    width: 100%!important;
+}
+
+/*--------------
+   Page Header
+---------------*/
+
+.page.header {
+    padding-top: 1px;
+    height: 80px;
+}
+.page.header .main.menu {
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #ECECEC;
+    margin-bottom: 24px;
+    width: 100%;
+    height: 80px;
+    border-radius: 0;
+    box-shadow: none;
+    border: 0;
+}
+.page.header .main.menu .secondary.menu {
+    height: 100%;
+}
+.page.header .main.menu .secondary.menu .item {
+    padding-bottom: 30px;
+    margin-left: 40px;
+    margin-right: 0px;
+}
+.page.header .main.menu.fixed {
+    box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+}
+.page.header .main.menu .icon.item {
+    height: 100%;
+}
+.page.header .main.menu .column:first-child {
+    border-right: 1px solid #e9e9e9;
+    padding: 0!important;
+}
+.page.header .main.menu .ui.secondary.menu .active.item {
+    border-color: #2db7f5!important;
+    border-bottom-width: 3px!important;
+    margin-bottom: -1px;
+}
+.page.header .main.menu.fixed .ui.secondary.menu .active.item {
+    margin-bottom: -2px;
+}
+.page.header .icon.launch.button {
+    margin-top: 25px;
+    margin-left: 4%;
+}
+
+/*--------------
+   Page Content
+---------------*/
+
+.page.content {
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    width: 92%;
+    margin: 24px auto;
+    border-radius: 6px;
+    padding: 24px 0 0;
+}
+.page.content .vertical.pointing.menu {
+    width: 100%;
+}
+.page.content .column:first-child {
+    border-right: 1px solid #e9e9e9;
+    padding-right: 0!important;
+}
+
+/*--------------
+     Footer
+---------------*/
+
+.footer {
+    clear: both;
+    border-top: 1px solid #eee;
+    font-size: 12px;
+    background: #fff;
+    position: relative;
+    box-shadow: 0 1000px 0 1000px #fff;
+}
+.footer .container {
+    padding: 0px 2%!important;
+}
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.footer ul li {
+    float: left;
+    width: 25%;
+    padding: 24px 2%;
+}
