@@ -26,12 +26,13 @@
   "scripts": {
     "build": "npm run build:default -s && npm run build:antd -s",
     "build:gulp": "cd semantic && gulp build",
-    "build:default": "sed 's/{{theme}}/default/g' <./templates/theme.config >./semantic/src/theme.config && sed 's/{{theme}}/default/g' <./templates/semantic.json >semantic.json && npm run build:gulp",
-    "build:antd": "sed 's/{{theme}}/antd/g' <./templates/theme.config >./semantic/src/theme.config && sed 's/{{theme}}/antd/g' <./templates/semantic.json >semantic.json  && npm run build:gulp",
+    "build:default": "sed 's/{{theme}}/default/g' <./templates/theme.config >./semantic/src/theme.config && sed 's/{{theme}}/default/g' <./templates/semantic.json >semantic.json && npm run build:gulp -s",
+    "build:antd": "sed 's/{{theme}}/antd/g' <./templates/theme.config >./semantic/src/theme.config && sed 's/{{theme}}/antd/g' <./templates/semantic.json >semantic.json  && npm run build:gulp -s",
+    "prebuild": "rm -rf ./assets/css/ui",
     "deploy": "cd $npm_package_config_dir_dist && git push --force --quiet \"https://${GH_TOKEN}@${GH_REF}\" ${npm_package_config_deploy_branch} > /dev/null 2>&1 ",
-    "deploy:init": "rm -rf $npm_package_config_dir_dist && mkdir -p ${npm_package_config_dir_dist}",
+    "deploy:init": "rm -rf $npm_package_config_dir_dist && mkdir -p $npm_package_config_dir_dist",
     "deploy:copy": "cp -r ${npm_package_config_dir_src}assets $npm_package_config_dir_dist && cp ${npm_package_config_dir_src}index.html $npm_package_config_dir_dist",
-    "predeploy": "npm run deploy:init -s && npm run deploy:copy -s && cd $npm_package_config_dir_dist && git init && git config user.name $npm_package_config_deploy_name && git config user.email $npm_package_config_deploy_email && git add -A . && git commit -am \"$npm_package_config_deploy_message\" ",
+    "predeploy": "npm run build -s && npm run deploy:init -s && npm run deploy:copy -s && cd $npm_package_config_dir_dist && git init && git config user.name $npm_package_config_deploy_name && git config user.email $npm_package_config_deploy_email && git add -A . && git commit -am \"$npm_package_config_deploy_message\" ",
     "watch": "cd semantic && gulp"
   },
   "bugs": {
