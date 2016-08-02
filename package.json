@@ -24,7 +24,7 @@
     }
   },
   "scripts": {
-    "build": "build:default && build:antd",
+    "build": "npm run build:default -s && npm run build:antd -s",
     "build:gulp": "cd semantic && gulp build",
     "build:default": "sed 's/{{theme}}/default/g' <./templates/theme.config >./semantic/src/theme.config && sed 's/{{theme}}/default/g' <./templates/semantic.json >semantic.json && npm run build:gulp",
     "build:antd": "sed 's/{{theme}}/antd/g' <./templates/theme.config >./semantic/src/theme.config && sed 's/{{theme}}/antd/g' <./templates/semantic.json >semantic.json  && npm run build:gulp",

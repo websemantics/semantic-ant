@@ -4,3 +4,4 @@ npm-debug.log
 .DS_Store
 semantic.json
 /semantic/src/theme.config
+/assets/css/ui
