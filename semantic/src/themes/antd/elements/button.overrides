@@ -6,4 +6,3 @@
 .ui.compact.icon.button {
   padding: @compactVerticalPadding @compactHorizontalPadding ( @compactVerticalPadding + @shadowOffset );
 }
-
