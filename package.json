@@ -15,7 +15,7 @@
     "deploy": {
       "name": "iAyeBot",
       "email": "iayebot@websemantics.ca",
-      "branch": "gh-pages",
+      "branch": "master:gh-pages",
       "message": "Deploy to gh-pages"
     },
     "dir": {
