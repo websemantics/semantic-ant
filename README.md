@@ -21,11 +21,11 @@
                     ___]  |___  |  |  |  |  | \|   |   |  |___        |  |  | \|   |  
 ```
 
-> [Ant Design](http://ant.design/) inspired theme for [Semantic-ui](http://semantic-ui.com/)
+> [Ant Design](http://ant.design/) inspired theme for [Semantic-UI](http://semantic-ui.com/)
 
 [![Build Status](https://travis-ci.org/websemantics/semantic-ant.svg?branch=master)](https://travis-ci.org/websemantics/semantic-ant)
 
-[Semantic Ant]http://websemantics.github.io/semantic-ant/ is a custom theme for building beautiful modern Web apps with the combined awesomeness of [Semantic-ui](http://semantic-ui.com/) framework and the elegant minimal styles of [Ant Design](http://ant.design/) for beautiful and responsive layouts</p>
+[Semantic Ant](http://websemantics.github.io/semantic-ant) is a custom theme for building beautiful modern Web apps with the combined awesomeness of [Semantic-ui](http://semantic-ui.com/) framework and the elegant minimal styles of [Ant Design](http://ant.design/) for beautiful and responsive layouts</p>
 
 ### [Live demo](http://websemantics.github.io/semantic-ant/)
 

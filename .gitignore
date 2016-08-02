@@ -1,6 +1,4 @@
 /dist
-semantic.json
-/semantic/src/theme.config
 /assets/css/ui
 /node_modules
 npm-debug.log
