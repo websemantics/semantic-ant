@@ -59,9 +59,11 @@ $(document)
         offset: 100
       })
 
-    /* sidebar */
+      $('a.item.theme').click(function() {
+        changeTheme($(this).data('theme'))
+      })
 
-    var regExp = /(\/components\/).*(\/[a-z]*.css)/
+    /* sidebar */
 
     $('.ui.sidebar').sidebar({
         transition: 'push',
@@ -71,10 +73,27 @@ $(document)
     $('.ui.sidebar .dropdown')
       .dropdown({
         onChange: function(theme) {
-            $.each($('link.themable'), function() {
-              $(this).attr('href', $(this).attr('href').replace(regExp, '$1' + theme + '$2'))
-          })
+          changeTheme(theme)
         }
       }).dropdown('set selected', 'antd')
 
   })
+
+  /*
+   * Change Theme
+   */
+
+  function changeTheme(theme){
+    console.log(theme)
+    var regExp = /(\/components\/).*(\/[a-z]*.css)/
+    $.each($('link.themable'), function() {
+      $(this).attr('href', $(this).attr('href').replace(regExp, '$1' + theme + '$2'))
+    })
+
+    /* activate theme links */
+    $('a.item.theme').removeClass('active')
+    $('a.item.theme[data-theme="'+theme+'"]').addClass('active')
+
+    /* set drop down too */
+    $('.ui.sidebar .dropdown').dropdown('set selected', theme)
+  }

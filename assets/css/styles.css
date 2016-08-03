@@ -102,13 +102,10 @@ body.pushable> .pusher {
   font-size: 10px!important;
   min-width: 5em;
   color: #666;
-  background: #FFF;
-  transition: background-color 0.5s ease;
 }
 .overlay .ui.labeled.icon.menu a.item.active,
 .overlay .ui.labeled.icon.menu a.item:hover {
   color: #2db7f5!important;
-  background-color: #eaf8fe!important;
 }
 /*--------------
    Page Header
