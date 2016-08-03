@@ -5,12 +5,12 @@
 @pageMinWidth  : 1049px;
 @pageOverflowX : visible;
 
-@emSize: 13px;
-@fontSize : 13px;
-@fontName : 'Arial';
+@emSize: 12px;
+@fontSize : 12px;
+@fontName : 'Helvetica Neue';
 @importGoogleFonts : false;
 
-@bigSize : (18 / 13);
+@bigSize : (18 / 12);
 
 @h1: 2.25em;
 
@@ -23,11 +23,11 @@
 @green: #78CB5B;
 @orange: #D26911;
 @black: #333333;
-@primaryColor: @green;
+@primaryColor: #2db7f5;
 @secondaryColor: @black;
 
 /* Links */
-@linkColor: #4078C0;
+@linkColor: @primaryColor;
 @linkHoverColor: @linkColor;
 @linkHoverUnderline: underline;
 

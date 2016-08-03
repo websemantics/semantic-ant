@@ -2,6 +2,41 @@
           Global CSS
 *******************************/
 
+
+/* latin */
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(http://fontstatic.useso.com/s/lato/v11/MDadn8DQ_3oT6kvnUq_2r_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* latin */
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato Bold'), local('Lato-Bold'), url(http://fontstatic.useso.com/s/lato/v11/MgNNr5y1C_tIEuLEmicLmwLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* latin */
+
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Raleway'), url(http://fontstatic.useso.com/s/raleway/v9/QAUlVt1jXOgQavlW5wEfxQLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+body {
+    line-height: 1.5;
+    color: #666;
+    font-size: 14px;
+}
 body.pushable {
     background: #FFF;
 }
@@ -9,22 +44,34 @@ body.pushable> .pusher {
     z-index: 0;
     background: #ececec!important;
 }
+.markdown h1 {
+    font-size: 28px;
+    color: #404040;
+    font-weight: 400;
+    line-height: 40px;
+    margin-bottom: 24px;
+    margin-top: 8px;
+    font-family: lato, "Helvetica Neue";
+}
 
 /*--------------
   Global Styles
 ---------------*/
 
-a {
-    color: #2db7f5!important;
-}
-a:hover b {
-    color: inherit;
-}
 .ui.grid {
     width: 100%;
 }
 .ui.secondary.menu {
     border-color: #FFF!important;
+}
+.ui.menu .item {
+    font-size: 14px;
+    color: #666;
+    font-weight: normal;
+}
+.ui.menu .active.item {
+    color: #2db7f5!important;
+    border-color: #2db7f5!important;
 }
 .ui.container {
     overflow: hidden;
@@ -33,7 +80,35 @@ a:hover b {
     width: 100%!important;
 }
 .heart.icon {
-    color:#D8461D;
+    color: #D8461D;
+}
+
+/*--------------
+   Overlay Menu
+---------------*/
+
+.overlay {
+    position: fixed;
+    right: 5%;
+    margin: 0;
+    transition: right 0.5s ease;
+    z-index: 10;
+}
+.overlay.fixed {
+    position: fixed;
+    right: 3%;
+}
+.overlay .ui.labeled.icon.menu a.item {
+  font-size: 10px!important;
+  min-width: 5em;
+  color: #666;
+  background: #FFF;
+  transition: background-color 0.5s ease;
+}
+.overlay .ui.labeled.icon.menu a.item.active,
+.overlay .ui.labeled.icon.menu a.item:hover {
+  color: #2db7f5!important;
+  background-color: #eaf8fe!important;
 }
 /*--------------
    Page Header
@@ -42,6 +117,17 @@ a:hover b {
 .page.header {
     padding-top: 1px;
     height: 80px;
+}
+.page.header .icon.item.logo span {
+    font-size: 16px;
+    font-family: 'Raleway', 'Hiragino Sans GB', sans-serif;
+    line-height: 80px;
+    text-transform: uppercase;
+}
+.page.header .icon.item.logo img {
+    width: 40px;
+    line-height: 80px;
+    margin-right: 8px;
 }
 .page.header .main.menu {
     -webkit-transition: opacity .5s;
@@ -74,7 +160,6 @@ a:hover b {
     padding: 0!important;
 }
 .page.header .main.menu .ui.secondary.menu .active.item {
-    border-color: #2db7f5!important;
     border-bottom-width: 3px!important;
     margin-bottom: -1px;
 }
@@ -102,7 +187,12 @@ a:hover b {
 .page.content .vertical.pointing.menu {
     width: 100%;
 }
-.page.content .column:first-child {
+.page.content .vertical.pointing.menu .item:hover, .page.content .vertical.pointing.menu .active.item {
+    background-color: #eaf8fe!important;
+    -webkit-transition: background-color .4s ease;
+    transition: background-color .4s ease;
+}
+.page.content .ui.grid .index.column {
     border-right: 1px solid #e9e9e9;
     padding-right: 0!important;
 }
@@ -132,4 +222,61 @@ a:hover b {
     float: left;
     width: 25%;
     padding: 24px 2%;
+}
+.footer ul li>h2 {
+    font-size: 14px;
+    margin: 0 auto 8px;
+    font-weight: 500;
+}
+
+/*******************************
+          Bragit CSS, http://websemantics.github.io/bragit/
+*******************************/
+
+table.bragit {
+    width: 100%;
+    margin-bottom: 22px!important;
+    margin-bottom: 10px;
+}
+.ui.bragit.button, .ui.bragit.buttons .button {
+    white-space: nowrap;
+    background-color: #f0736f;
+    color: #fff!important;
+}
+.ui.bragit.label {
+    color: #f0736f!important;
+    border-color: #f0736f!important;
+    background-color: #ffffff;
+}
+.ui.bragit.button:focus, .ui.bragit.buttons .button:focus, .ui.bragit.button:hover, .ui.bragit.buttons .button:hover {
+    background-color: #eb4641;
+}
+.ui.bragit.labels .label:focus, .ui.bragit.label:focus, .ui.bragit.labels .label:hover, .ui.bragit.label:hover {
+    color: #eb4641!important;
+    border-color: #eb4641!important;
+}
+.ui.labeled .ui.button .star.icon {
+    color: #F5CC7A!important;
+}
+
+/*******************************
+          Sidebar CSS
+*******************************/
+
+.ui.sidebar {
+    background-color: #FFFFFF;
+    padding: 1em;
+}
+.ui.sidebar .button+ .button {
+    margin-top: 0.5em;
+}
+.alternate.menu {
+    display: none;
+}
+
+/* small fix to avoid having to recenter buttons in each theme */
+
+.ui.labeled.button> .button {
+    display: flex;
+    align-items: center;
 }

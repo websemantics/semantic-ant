@@ -22,6 +22,18 @@ $(document)
 
     /* page */
 
+    $('[data-content]')
+      .popup({
+        duration : 200,
+        delay    : {
+          show: 200,
+          hide: 200
+        },
+        variation : 'inverted',
+        position  : 'top center'
+      })
+    ;
+
     $('.ui.main.menu').visibility({
       once: false,
       type:'fixed',
@@ -30,6 +42,22 @@ $(document)
         $(this).parent().height($(this).height() -1)
       }
     })
+
+    $('.ui.menu .ui.dropdown').dropdown({
+      on: 'hover'
+    });
+    $('.ui.menu a.item')
+      .on('click', function() {
+        $(this)
+          .addClass('active')
+          .siblings()
+          .removeClass('active')
+      })
+
+      $('.overlay').visibility({
+        type: 'fixed',
+        offset: 100
+      })
 
     /* sidebar */
 

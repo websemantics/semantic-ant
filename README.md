@@ -55,6 +55,57 @@ npm run watch
 
 The [official documentation](http://semantic-ui.com/usage/theming.html) of Semantic-ui is a great resource that explains with examples how to work with themes.
 
+### Progress
+
+- [ ] Reset
+- [ ] Site
+- [ ] Button
+- [ ] Container
+- [ ] Divider
+- [ ] Flag
+- [ ] Header
+- [x] Icon
+- [ ] Image
+- [ ] Input
+- [ ] Label
+- [ ] List
+- [ ] Loader
+- [ ] Rail
+- [ ] Reveal
+- [ ] Segment
+- [ ] Step
+- [ ] Breadcrumb
+- [ ] Form
+- [ ] Grid
+- [ ] Menu
+- [ ] Message
+- [ ] Table
+- [ ] Ad
+- [ ] Card
+- [ ] Comment
+- [ ] Feed
+- [ ] Item
+- [ ] Statistic
+- [ ] Accordion
+- [ ] Checkbox
+- [ ] Dimmer
+- [ ] Dropdown
+- [ ] Embed
+- [ ] Modal
+- [ ] Nag
+- [ ] Popup
+- [ ] Progress
+- [ ] Search
+- [ ] Shape
+- [ ] Sidebar
+- [ ] Sticky
+- [ ] Tab
+- [ ] Transition
+- [ ] Api
+- [ ] Form
+- [ ] State
+- [ ] Visibility
+
 
 ## Releated
 

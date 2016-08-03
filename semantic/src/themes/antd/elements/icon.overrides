@@ -1,209 +1,188 @@
-/* Octicons */
+/* Iconfont */
 
-.icon.alert:before { content: '\f02d'} /*  */
-.icon.alignment.align:before { content: '\f08a'} /*  */
-.icon.alignment.aligned.to:before { content: '\f08e'} /*  */
-.icon.alignment.unalign:before { content: '\f08b'} /*  */
-.icon.arrow.down:before { content: '\f03f'} /*  */
-.icon.arrow.left:before { content: '\f040'} /*  */
-.icon.arrow.right:before { content: '\f03e'} /*  */
-.icon.arrow.small.down:before { content: '\f0a0'} /*  */
-.icon.arrow.small.left:before { content: '\f0a1'} /*  */
-.icon.arrow.small.right:before { content: '\f071'} /*  */
-.icon.arrow.small.up:before { content: '\f09f'} /*  */
-.icon.arrow.up:before { content: '\f03d'} /*  */
-.icon.bell:before { content: '\f0de'} /*  */
-.icon.beer:before { content: '\f069'} /*  */
-.icon.book:before { content: '\f007'} /*  */
-.icon.bookmark:before { content: '\f07b'} /*  */
-.icon.briefcase:before { content: '\f0d3'} /*  */
-.icon.broadcast:before { content: '\f048'} /*  */
-.icon.browser:before { content: '\f0c5'} /*  */
-.icon.bug:before { content: '\f091'} /*  */
-.icon.calendar:before { content: '\f068'} /*  */
-.icon.check:before { content: '\f03a'} /*  */
-.icon.checklist:before { content: '\f076'} /*  */
-.icon.chevron.down:before { content: '\f0a3'} /*  */
-.icon.chevron.left:before { content: '\f0a4'} /*  */
-.icon.chevron.right:before { content: '\f078'} /*  */
-.icon.chevron.up:before { content: '\f0a2'} /*  */
-.icon.circle.slash:before { content: '\f084'} /*  */
-.icon.circuit.board:before { content: '\f0d6'} /*  */
-.icon.clippy:before { content: '\f035'} /*  */
-.icon.clock:before { content: '\f046'} /*  */
-.icon.cloud.download:before { content: '\f00b'} /*  */
-.icon.cloud.upload:before { content: '\f00c'} /*  */
-.icon.code:before { content: '\f05f'} /*  */
-.icon.color.mode:before { content: '\f065'} /*  */
-.icon.comment.add:before,
-.icon.comment:before { content: '\f02b'} /*  */
-.icon.comment.discussion:before { content: '\f04f'} /*  */
-.icon.credit.card:before { content: '\f045'} /*  */
-.icon.dash:before { content: '\f0ca'} /*  */
-.icon.dashboard:before { content: '\f07d'} /*  */
-.icon.database:before { content: '\f096'} /*  */
-.icon.device.camera:before { content: '\f056'} /*  */
-.icon.device.camera.video:before { content: '\f057'} /*  */
-.icon.device.desktop:before { content: '\f27c'} /*  */
-.icon.device.mobile:before { content: '\f038'} /*  */
-.icon.diff:before { content: '\f04d'} /*  */
-.icon.diff.added:before { content: '\f06b'} /*  */
-.icon.diff.ignored:before { content: '\f099'} /*  */
-.icon.diff.modified:before { content: '\f06d'} /*  */
-.icon.diff.removed:before { content: '\f06c'} /*  */
-.icon.diff.renamed:before { content: '\f06e'} /*  */
-.icon.ellipsis:before { content: '\f09a'} /*  */
-.icon.eye.unwatch:before,
-.icon.eye.watch:before,
-.icon.eye:before { content: '\f04e'} /*  */
-.icon.file.binary:before { content: '\f094'} /*  */
-.icon.file.code:before { content: '\f010'} /*  */
-.icon.file.directory:before { content: '\f016'} /*  */
-.icon.file.media:before { content: '\f012'} /*  */
-.icon.file.pdf:before { content: '\f014'} /*  */
-.icon.file.submodule:before { content: '\f017'} /*  */
-.icon.file.symlink.directory:before { content: '\f0b1'} /*  */
-.icon.file.symlink.file:before { content: '\f0b0'} /*  */
-.icon.file.text:before { content: '\f011'} /*  */
-.icon.file.zip:before { content: '\f013'} /*  */
-.icon.flame:before { content: '\f0d2'} /*  */
-.icon.fold:before { content: '\f0cc'} /*  */
-.icon.gear:before { content: '\f02f'} /*  */
-.icon.gift:before { content: '\f042'} /*  */
-.icon.gist:before { content: '\f00e'} /*  */
-.icon.gist.secret:before { content: '\f08c'} /*  */
-.icon.git.branch.create:before,
-.icon.git.branch.delete:before,
-.icon.git.branch:before { content: '\f020'} /*  */
-.icon.git.commit:before { content: '\f01f'} /*  */
-.icon.git.compare:before { content: '\f0ac'} /*  */
-.icon.git.merge:before { content: '\f023'} /*  */
-.icon.git.pull.request.abandoned:before,
-.icon.git.pull.request:before { content: '\f009'} /*  */
-.icon.globe:before { content: '\f0b6'} /*  */
-.icon.graph:before { content: '\f043'} /*  */
-.icon.heart:before { content: '\2665'} /* ♥ */
-.icon.history:before { content: '\f07e'} /*  */
-.icon.home:before { content: '\f08d'} /*  */
-.icon.horizontal.rule:before { content: '\f070'} /*  */
-.icon.hourglass:before { content: '\f09e'} /*  */
-.icon.hubot:before { content: '\f09d'} /*  */
-.icon.inbox:before { content: '\f0cf'} /*  */
-.icon.info:before { content: '\f059'} /*  */
-.icon.issue.closed:before { content: '\f028'} /*  */
-.icon.issue.opened:before { content: '\f026'} /*  */
-.icon.issue.reopened:before { content: '\f027'} /*  */
-.icon.jersey:before { content: '\f019'} /*  */
-.icon.jump.down:before { content: '\f072'} /*  */
-.icon.jump.left:before { content: '\f0a5'} /*  */
-.icon.jump.right:before { content: '\f0a6'} /*  */
-.icon.jump.up:before { content: '\f073'} /*  */
-.icon.key:before { content: '\f049'} /*  */
-.icon.keyboard:before { content: '\f00d'} /*  */
-.icon.law:before { content: '\f0d8'} /*  */
-.icon.light.bulb:before { content: '\f000'} /*  */
-.icon.linkify:before { content: '\f05c'} /*  */
-.icon.linkify.external:before { content: '\f07f'} /*  */
-.icon.list.ordered:before { content: '\f062'} /*  */
-.icon.list.unordered:before { content: '\f061'} /*  */
-.icon.location:before { content: '\f060'} /*  */
-.icon.gist.private:before,
-.icon.mirror.private:before,
-.icon.git.fork.private:before,
-.icon.lock:before { content: '\f06a'} /*  */
-.icon.logo.github:before { content: '\f092'} /*  */
-.icon.mail:before { content: '\f03b'} /*  */
-.icon.mail.read:before { content: '\f03c'} /*  */
-.icon.mail.reply:before { content: '\f051'} /*  */
-.icon.mark.github:before { content: '\f00a'} /*  */
-.icon.markdown:before { content: '\f0c9'} /*  */
-.icon.megaphone:before { content: '\f077'} /*  */
-.icon.mention:before { content: '\f0be'} /*  */
-.icon.microscope:before { content: '\f089'} /*  */
-.icon.milestone:before { content: '\f075'} /*  */
-.icon.mirror.public:before,
-.icon.mirror:before { content: '\f024'} /*  */
-.icon.mortar.board:before { content: '\f0d7'} /*  */
-.icon.move.down:before { content: '\f0a8'} /*  */
-.icon.move.left:before { content: '\f074'} /*  */
-.icon.move.right:before { content: '\f0a9'} /*  */
-.icon.move.up:before { content: '\f0a7'} /*  */
-.icon.mute:before { content: '\f080'} /*  */
-.icon.no.newline:before { content: '\f09c'} /*  */
-.icon.octoface:before { content: '\f008'} /*  */
-.icon.organization:before { content: '\f037'} /*  */
-.icon.package:before { content: '\f0c4'} /*  */
-.icon.paintcan:before { content: '\f0d1'} /*  */
-.icon.pencil:before { content: '\f058'} /*  */
-.icon.person.add:before,
-.icon.person.follow:before,
-.icon.person:before { content: '\f018'} /*  */
-.icon.pin:before { content: '\f041'} /*  */
-.icon.playback.fast.forward:before { content: '\f0bd'} /*  */
-.icon.playback.pause:before { content: '\f0bb'} /*  */
-.icon.playback.play:before { content: '\f0bf'} /*  */
-.icon.playback.rewind:before { content: '\f0bc'} /*  */
-.icon.plug:before { content: '\f0d4'} /*  */
-.icon.repo.create:before,
-.icon.gist.new:before,
-.icon.file.directory.create:before,
-.icon.file.add:before,
-.icon.plus:before { content: '\f05d'} /*  */
-.icon.podium:before { content: '\f0af'} /*  */
-.icon.primitive.dot:before { content: '\f052'} /*  */
-.icon.primitive.square:before { content: '\f053'} /*  */
-.icon.pulse:before { content: '\f085'} /*  */
-.icon.puzzle:before { content: '\f0c0'} /*  */
-.icon.question:before { content: '\f02c'} /*  */
-.icon.quote:before { content: '\f063'} /*  */
-.icon.radio.tower:before { content: '\f030'} /*  */
-.icon.repo.delete:before,
-.icon.repo:before { content: '\f001'} /*  */
-.icon.repo.clone:before { content: '\f04c'} /*  */
-.icon.repo.force.push:before { content: '\f04a'} /*  */
-.icon.gist.fork:before,
-.icon.repo.forked:before { content: '\f002'} /*  */
-.icon.repo.pull:before { content: '\f006'} /*  */
-.icon.repo.push:before { content: '\f005'} /*  */
-.icon.rocket:before { content: '\f033'} /*  */
-.icon.rss:before { content: '\f034'} /*  */
-.icon.ruby:before { content: '\f047'} /*  */
-.icon.screen.full:before { content: '\f066'} /*  */
-.icon.screen.normal:before { content: '\f067'} /*  */
-.icon.search.save:before,
-.icon.search:before { content: '\f02e'} /*  */
-.icon.server:before { content: '\f097'} /*  */
-.icon.settings:before { content: '\f07c'} /*  */
-.icon.log.in:before,
-.icon.sign.in:before { content: '\f036'} /*  */
-.icon.log.out:before,
-.icon.sign.out:before { content: '\f032'} /*  */
-.icon.split:before { content: '\f0c6'} /*  */
-.icon.squirrel:before { content: '\f0b2'} /*  */
-.icon.star.add:before,
-.icon.star.delete:before,
-.icon.star:before { content: '\f02a'} /*  */
-.icon.steps:before { content: '\f0c7'} /*  */
-.icon.stop:before { content: '\f08f'} /*  */
-.icon.repo.sync:before,
-.icon.sync:before { content: '\f087'} /*  */
-.icon.tag.remove:before,
-.icon.tag.add:before,
-.icon.tag:before { content: '\f015'} /*  */
-.icon.telescope:before { content: '\f088'} /*  */
-.icon.terminal:before { content: '\f0c8'} /*  */
-.icon.three.bars:before { content: '\f05e'} /*  */
-.icon.thumbsdown:before { content: '\f0db'} /*  */
-.icon.thumbsup:before { content: '\f0da'} /*  */
-.icon.tools:before { content: '\f031'} /*  */
-.icon.trashcan:before { content: '\f0d0'} /*  */
-.icon.triangle.down:before { content: '\f05b'} /*  */
-.icon.triangle.left:before { content: '\f044'} /*  */
-.icon.triangle.right:before { content: '\f05a'} /*  */
-.icon.triangle.up:before { content: '\f0aa'} /*  */
-.icon.unfold:before { content: '\f039'} /*  */
-.icon.unmute:before { content: '\f0ba'} /*  */
-.icon.versions:before { content: '\f064'} /*  */
-.icon.remove.close:before,
-.icon.x:before { content: '\f081'} /*  */
-.icon.zap:before { content: '\26A1'} /* ⚡ */
+.icon.caret.circle.outline.up:before        {content:"\e60c";}
+.icon.android:before                  {content:"\e64f";}
+.icon.chrome:before                   {content:"\e65c";}
+.icon.appstore.outline:before               {content:"\e6b2";}
+.icon.appstore:before                 {content:"\e64d";}
+.icon.apple:before                    {content:"\e64e";}
+.icon.github:before                   {content:"\e674";}
+.icon.inbox:before                    {content:"\e67b";}
+.icon.ie:before                       {content:"\e67c";}
+.icon.smile:before                    {content:"\e677";}
+.icon.smile.circle:before             {content:"\e676";}
+.icon.meh.circle:before               {content:"\e678";}
+.icon.frown:before                    {content:"\e673";}
+.icon.frown.circle:before             {content:"\e672";}
+.icon.meh:before                      {content:"\e679";}
+.icon.pie.chart:before                {content:"\e68a";}
+.icon.tags:before                     {content:"\e656";}
+.icon.tags.outline:before                   {content:"\e657";}
+.icon.tag:before                      {content:"\e658";}
+.icon.tag.outline:before                    {content:"\e659";}
+.icon.cloud:before                    {content:"\e65a";}
+.icon.cloud.upload.outline:before           {content:"\e697";}
+.icon.cloud.download.outline:before         {content:"\e698";}
+.icon.cloud.upload:before             {content:"\e696";}
+.icon.cloud.outline:before                  {content:"\e699";}
+.icon.cloud.download:before           {content:"\e65b";}
+.icon.star.outline:before                   {content:"\e693";}
+.icon.star:before                     {content:"\e694";}
+.icon.environment:before              {content:"\e665";}
+.icon.environment.outline:before            {content:"\e666";}
+.icon.eye:before                      {content:"\e66e";}
+.icon.eye.outline:before                    {content:"\e66d";}
+.icon.camera:before                   {content:"\e653";}
+.icon.camera.outline:before                 {content:"\e652";}
+.icon.aliwangwang:before              {content:"\e64b";}
+.icon.aliwangwang.outline:before            {content:"\e64a";}
+.icon.windows:before                  {content:"\e6a0";}
+.icon.shopping.cart:before            {content:"\e692";}
+.icon.unlock:before                   {content:"\e69f";}
+.icon.lock:before                     {content:"\e69d";}
+.icon.save:before                     {content:"\e69e";}
+.icon.user:before                     {content:"\e69c";}
+.icon.video.camera:before             {content:"\e69b";}
+.icon.to.top:before                   {content:"\e69a";}
+.icon.team:before                     {content:"\e680";}
+.icon.tablet:before                   {content:"\e695";}
+.icon.solution:before                 {content:"\e68f";}
+.icon.poweroff:before                 {content:"\e691";}
+.icon.search:before                   {content:"\e690";}
+.icon.share.alt:before                {content:"\e68e";}
+.icon.setting:before                  {content:"\e68d";}
+.icon.poweroff:before                 {content:"\e68b";}
+.icon.picture:before                  {content:"\e689";}
+.icon.phone:before                    {content:"\e688";}
+.icon.paper.clip:before               {content:"\e687";}
+.icon.notification:before             {content:"\e686";}
+.icon.mobile:before                   {content:"\e685";}
+.icon.menu.fold:before                {content:"\e684";}
+.icon.menu.unfold:before              {content:"\e683";}
+.icon.mail:before                     {content:"\e682";}
+.icon.logout:before                   {content:"\e681";}
+.icon.link:before                     {content:"\e67e";}
+.icon.line.chart:before               {content:"\e67f";}
+.icon.home:before                     {content:"\e67d";}
+.icon.laptop:before                   {content:"\e67a";}
+.icon.hdd:before                      {content:"\e675";}
+.icon.folder.open:before              {content:"\e671";}
+.icon.folder:before                   {content:"\e670";}
+.icon.filter:before                   {content:"\e66f";}
+.icon.file.text:before                {content:"\e66c";}
+.icon.file:before                     {content:"\e66b";}
+.icon.file.unknown:before             {content:"\e6a6";}
+.icon.file.excel:before               {content:"\e6ac";}
+.icon.file.pdf:before                 {content:"\e6ab";}
+.icon.file.jpg:before                 {content:"\e6aa";}
+.icon.file.ppt:before                 {content:"\e6a7";}
+.icon.exception:before                {content:"\e66a";}
+.icon.export:before                   {content:"\e669";}
+.icon.desktop:before                  {content:"\e662";}
+.icon.edit:before                     {content:"\e668";}
+.icon.ellipsis:before                 {content:"\e667";}
+.icon.upload:before                   {content:"\e664";}
+.icon.download:before                 {content:"\e663";}
+.icon.delete:before                   {content:"\e661";}
+.icon.copy:before                     {content:"\e660";}
+.icon.customerservice:before          {content:"\e65e";}
+.icon.credit.card:before              {content:"\e65f";}
+.icon.code:before                     {content:"\e65d";}
+.icon.calendar:before                 {content:"\e654";}
+.icon.book:before                     {content:"\e655";}
+.icon.bars:before                     {content:"\e650";}
+.icon.bar.chart:before                {content:"\e651";}
+.icon.area.chart:before               {content:"\e64c";}
+.icon.question.circle.outline:before        {content:"\e648";}
+.icon.question:before                 {content:"\e649";}
+.icon.question.circle:before          {content:"\e647";}
+.icon.pause.circle:before             {content:"\e644";}
+.icon.pause:before                    {content:"\e646";}
+.icon.pause.circle.outline:before           {content:"\e645";}
+.icon.clock.circle:before             {content:"\e642";}
+.icon.clock.circle.outline:before           {content:"\e643";}
+.icon.swap:before                     {content:"\e641";}
+.icon.swap.left:before                {content:"\e63f";}
+.icon.swap.right:before               {content:"\e640";}
+.icon.plus.circle:before              {content:"\e63d";}
+.icon.plus:before                     {content:"\e63e";}
+.icon.plus.circle.outline:before            {content:"\e63c";}
+.icon.minus:before                    {content:"\e63b";}
+.icon.minus.circle.outline:before           {content:"\e63a";}
+.icon.minus.circle:before             {content:"\e639";}
+.icon.plus.square:before              {content:"\e6ae";}
+.icon.minus.square:before             {content:"\e6ad";}
+.icon.info.circle.outline:before            {content:"\e638";}
+.icon.info.circle:before              {content:"\e637";}
+.icon.info:before                     {content:"\e636";}
+.icon.exclamation.circle:before       {content:"\e634";}
+.icon.exclamation.circle.outline:before     {content:"\e635";}
+.icon.exclamation:before              {content:"\e633";}
+.icon.cross.circle:before             {content:"\e631";}
+.icon.cross.circle.outline:before           {content:"\e632";}
+.icon.check.circle:before             {content:"\e62f";}
+.icon.check.circle.outline:before           {content:"\e630";}
+.icon.cross:before                    {content:"\e62d";}
+.icon.check:before                    {content:"\e62e";}
+.icon.verticle.right:before           {content:"\e62c";}
+.icon.verticle.left:before            {content:"\e62b";}
+.icon.rollback:before                 {content:"\e62a";}
+.icon.enter:before                    {content:"\e6b6";}
+.icon.retweet:before                  {content:"\e627";}
+.icon.shrink:before                   {content:"\e628";}
+.icon.arrow.salt:before               {content:"\e629";}
+.icon.reload:before                   {content:"\e626";}
+.icon.double.right:before             {content:"\e625";}
+.icon.double.left:before              {content:"\e624";}
+.icon.arrow.right:before              {content:"\e621";}
+.icon.arrow.up:before                 {content:"\e622";}
+.icon.arrow.down:before               {content:"\e623";}
+.icon.arrow.left:before               {content:"\e620";}
+.icon.left:before                     {content:"\e601";}
+.icon.right:before                    {content:"\e600";}
+.icon.down:before                     {content:"\e603";}
+.icon.up:before                       {content:"\e602";}
+.icon.play.circle:before              {content:"\e61e";}
+.icon.play.circle.outline:before            {content:"\e61f";}
+.icon.circle.left:before              {content:"\e61b";}
+.icon.circle.up:before                {content:"\e61c";}
+.icon.circle.down:before              {content:"\e61d";}
+.icon.circle.right:before             {content:"\e61a";}
+.icon.circle.outline.right:before           {content:"\e616";}
+.icon.circle.outline.up:before              {content:"\e618";}
+.icon.circle.outline.down:before            {content:"\e617";}
+.icon.circle.outline.left:before            {content:"\e619";}
+.icon.step.backward:before            {content:"\e614";}
+.icon.step.forward:before             {content:"\e615";}
+.icon.fast.backward:before            {content:"\e613";}
+.icon.fast.forward:before             {content:"\e612";}
+.icon.caret.left:before               {content:"\e60f";}
+.icon.caret.right:before              {content:"\e60a";}
+.icon.caret.down:before               {content:"\e611";}
+.icon.caret.up:before                 {content:"\e610";}
+.icon.forward:before                  {content:"\e608";}
+.icon.backward:before                 {content:"\e609";}
+.icon.caret.circle.outline.down:before      {content:"\e60e";}
+.icon.caret.circle.outline.right:before     {content:"\e60d";}
+.icon.caret.circle.outline.left:before      {content:"\e60b";}
+.icon.caret.circle.left:before        {content:"\e604";}
+.icon.caret.circle.right:before       {content:"\e605";}
+.icon.caret.circle.up:before          {content:"\e606";}
+.icon.caret.circle.down:before        {content:"\e607";}
+.icon.qrcode:before                   {content:"\e6a5";}
+.icon.scan:before                     {content:"\e6af";}
+.icon.like:before                     {content:"\e6a3";}
+.icon.dislike:before                  {content:"\e6a2";}
+.icon.pay.circle:before               {content:"\e6a8";}
+.icon.pay.circle.outline:before             {content:"\e6a9";}
+.icon.message:before                  {content:"\e6a4";}
+.icon.heart:before                    {content:"\e68c";}
+.icon.heart.outline:before                  {content:"\e6b0";}
+.icon.calculator:before               {content:"\e6b1";}
+.icon.pushpin:before                  {content:"\e6b5";}
+.icon.pushpin.outline:before                {content:"\e6b3";}
+.icon.loading:before {
+  display: inline-block;
+  animation: loadingCircle 1s infinite linear;
+  content:"\e6a1";
+}

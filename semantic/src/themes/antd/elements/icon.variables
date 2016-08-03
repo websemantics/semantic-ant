@@ -1,19 +1,21 @@
-@fontPath: '../../themes/github/assets/fonts';
-@fontName: 'octicons';
+@fontPath: '../../themes/antd/assets/fonts';
+@fontName: 'anticon';
 @src:
+  url("@{fontPath}/@{fontName}.eot"),
   url("@{fontPath}/@{fontName}.eot?#iefix") format('embedded-opentype'),
   url("@{fontPath}/@{fontName}.woff") format('woff'),
   url("@{fontPath}/@{fontName}.ttf") format('truetype'),
-  url("@{fontPath}/@{fontName}.svg#icons") format('svg')
+  url("@{fontPath}/@{fontName}.svg#iconfont") format('svg')
 ;
+
 @fallbackSRC: '';
 
-@width: 1em;
-@height: 1em;
+@width: 1.18em;
+@height: 1.18em;
 
-@small: 13px;
-@medium: 16px;
-@large: 18px;
-@big : 20px;
-@huge: 28px;
-@massive: 32px;
+@small: 9px;
+@medium: 12px;
+@large: 14px;
+@big : 16px;
+@huge: 24px;
+@massive: 28px;
