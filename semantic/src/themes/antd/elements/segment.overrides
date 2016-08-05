@@ -1,3 +1,114 @@
 /*******************************
            Overrides
 *******************************/
+
+
+/*******************************
+          Code Box [NEW]
+*******************************/
+
+.ui.code.segment {
+    padding: 0;
+    box-shadow: none;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    &:hover {
+        box-shadow: 0 0 6px rgba(0, 0, 0, .15);
+    }
+    &:hover, &:target {
+        .meta {
+            background: #fbfbfb;
+            .title {
+                background: #fbfbfb;
+                box-shadow: 0 -1.2px 0 @borderColor;
+            }
+        }
+    }
+    &.expand {
+        .meta {
+            border-radius: 0;
+            border-bottom: 1px dashed @borderColor;
+        }
+        .meta .collapse {
+            -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+        }
+        .highlight.wrapper {
+            max-height: 500px;
+            opacity: 1;
+        }
+    }
+    .content {
+        border-bottom: 1px solid @borderColor;
+        padding: 40px 20px 50px;
+    }
+    .meta {
+        position: relative;
+        padding: 16px;
+        border-radius: 0 0 6px 6px;
+        -webkit-transition: background-color .4s ease;
+        transition: background-color .4s ease;
+        .title {
+            position: absolute;
+            top: -14px;
+            padding: 1px 1.1em;
+            border-radius: 6px;
+            background: #fff;
+            font-weight: normal;
+            -webkit-transition: all .4s ease;
+            transition: all .4s ease;
+            & i.icon {
+                font-size: 18px;
+                vertical-align: baseline;
+                position: relative;
+                margin-right: 8px;
+                top: 2px;
+                color: #ccc;
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                display: inline-block;
+            }
+            a, a:hover {
+                color: #666;
+                font-size: larger;
+                text-decoration: none;
+            }
+        }
+        .collapse {
+            color: #999;
+            position: absolute;
+            right: 16px;
+            bottom: 16px;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+            font-size: 17px;
+            line-height: 18px;
+            opacity: .5;
+            text-align: center;
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+            -webkit-transition: all .3s ease;
+            transition: all .3s ease;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            border-radius: 100%;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    .highlight.wrapper {
+        max-height: 0;
+        opacity: 0;
+        overflow: auto;
+        border-radius: 0 0 6px 6px;
+        -webkit-transition: all .4s ease;
+        transition: all .4s ease;
+        .highlight {
+            line-height: 1.5;
+        }
+    }
+}

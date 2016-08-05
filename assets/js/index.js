@@ -20,6 +20,28 @@ Bragit.defaults({css:{ignore:true}})
 $(document)
   .ready(function() {
 
+    prettyPrint()
+
+    /* button click effect */
+    
+    $('.ui.button')
+      .on('click', function() {
+        var button = $(this)
+        button.addClass('clicked');
+         setTimeout(function(){button.removeClass('clicked')}, 320);
+      })
+
+
+    /* code box */
+
+    $('.ui.code.segment .collapse')
+      .on('click', function() {
+        $(this)
+        .closest( ".ui.code.segment" )
+        .toggleClass( "expand");
+      })
+
+
     /* page */
 
     $('[data-content]')
@@ -59,8 +81,9 @@ $(document)
         offset: 100
       })
 
-      $('a.item.theme').click(function() {
-        changeTheme($(this).data('theme'))
+      $('.overlay a.item').click(function() {
+        changeTheme($(this).attr('rel'))
+        return false
       })
 
     /* sidebar */
@@ -84,16 +107,17 @@ $(document)
    */
 
   function changeTheme(theme){
-    console.log(theme)
+
     var regExp = /(\/components\/).*(\/[a-z]*.css)/
     $.each($('link.themable'), function() {
       $(this).attr('href', $(this).attr('href').replace(regExp, '$1' + theme + '$2'))
     })
 
     /* activate theme links */
-    $('a.item.theme').removeClass('active')
-    $('a.item.theme[data-theme="'+theme+'"]').addClass('active')
+    $('.overlay a.item').removeClass('active')
+    $('.overlay a.item[rel="'+theme+'"]').addClass('active')
 
     /* set drop down too */
     $('.ui.sidebar .dropdown').dropdown('set selected', theme)
+
   }

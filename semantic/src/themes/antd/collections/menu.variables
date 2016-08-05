@@ -26,7 +26,7 @@
 --------------------*/
 
 /* Tabular */
-@tabularBorderColor: #EEEEEE;
+@tabularBorderColor: #e9e9e9;
 @tabularVerticalBackground: linear-gradient(to left, #f6f6f6 0%, #fff 8px) transparent;
 @tabularVerticalPadding: @relative7px;
 @tabularHorizontalPadding: 1.15384em;

@@ -14,7 +14,7 @@
 
 @h1: 2.25em;
 
-@defaultBorderRadius: 0.2307em;
+@defaultBorderRadius: 6px; /* antd */
 
 @disabledOpacity: 0.3;
 
@@ -26,15 +26,16 @@
 @primaryColor: #2db7f5;
 @secondaryColor: @black;
 
+
 /* Links */
 @linkColor: @primaryColor;
 @linkHoverColor: @linkColor;
 @linkHoverUnderline: underline;
 
 /* Borders */
-@borderColor: rgba(0, 0, 0, 0.13);
+@borderColor: #e9e9e9;
 @solidBorderColor: #DDDDDD;
-@internalBorderColor: rgba(0, 0, 0, 0.06);
+@internalBorderColor: #e9e9e9;
 @selectedBorderColor: #51A7E8;
 
 /* Breakpoints */
@@ -44,6 +45,93 @@
 
 @infoBackgroundColor: #E6F1F6;
 
-@infoTextColor: #4E575B;
-@warningTextColor: #613A00;
-@errorTextColor: #991111;
+/*-------------------
+    Emotive Colors
+--------------------*/
+
+/* Positive */
+@positiveColor           : #87d068;
+@positiveBackgroundColor : #FCFFF5;
+@positiveBorderColor     : #A3C293;
+@positiveHeaderColor     : #1A531B;
+@positiveTextColor       : #2C662D;
+
+/* Negative */
+@negativeColor           : #f50;
+@negativeBackgroundColor : #FFF6F6;
+@negativeBorderColor     : #E0B4B4;
+@negativeHeaderColor     : #912D2B;
+@negativeTextColor       : #9F3A38;
+
+/* Info */
+@infoColor              : #2db7f5;
+@infoBackgroundColor    : #F8FFFF;
+@infoBorderColor        : #A9D5DE;
+@infoHeaderColor        : #0E566C;
+@infoTextColor          : #276F86;
+
+/* Warning */
+@warningColor           : #ffaa00;
+@warningBorderColor     : #C9BA9B;
+@warningBackgroundColor : #FFFAF3;
+@warningHeaderColor     : #794B02;
+@warningTextColor       : #573A08;
+
+
+/* Positive / Negative Dupes */
+
+@successBackgroundColor : @positiveBackgroundColor;
+@successColor           : @positiveColor;
+@successBorderColor     : @positiveBorderColor;
+@successHeaderColor     : @positiveHeaderColor;
+@successTextColor       : @positiveTextColor;
+
+@errorBackgroundColor   : @negativeBackgroundColor;
+@errorColor             : @negativeColor;
+@errorBorderColor       : @negativeBorderColor;
+@errorHeaderColor       : @negativeHeaderColor;
+@errorTextColor         : @negativeTextColor;
+
+/*---  Colors  ---*/
+@primaryColorHover    : saturate(lighten(@primaryColor, 5), 10, relative);
+@secondaryColorHover  : saturate(lighten(@secondaryColor, 5), 10, relative);
+
+@redHover             : saturate(lighten(@red, 5), 10, relative);
+@orangeHover          : saturate(lighten(@orange, 5), 10, relative);
+@yellowHover          : saturate(lighten(@yellow, 5), 10, relative);
+@oliveHover           : saturate(lighten(@olive, 5), 10, relative);
+@greenHover           : saturate(lighten(@green, 5), 10, relative);
+@tealHover            : saturate(lighten(@teal, 5), 10, relative);
+@blueHover            : saturate(lighten(@blue, 5), 10, relative);
+@violetHover          : saturate(lighten(@violet, 5), 10, relative);
+@purpleHover          : saturate(lighten(@purple, 5), 10, relative);
+@pinkHover            : saturate(lighten(@pink, 5), 10, relative);
+@brownHover           : saturate(lighten(@brown, 5), 10, relative);
+
+@lightRedHover        : saturate(lighten(@lightRed, 5), 10, relative);
+@lightOrangeHover     : saturate(lighten(@lightOrange, 5), 10, relative);
+@lightYellowHover     : saturate(lighten(@lightYellow, 5), 10, relative);
+@lightOliveHover      : saturate(lighten(@lightOlive, 5), 10, relative);
+@lightGreenHover      : saturate(lighten(@lightGreen, 5), 10, relative);
+@lightTealHover       : saturate(lighten(@lightTeal, 5), 10, relative);
+@lightBlueHover       : saturate(lighten(@lightBlue, 5), 10, relative);
+@lightVioletHover     : saturate(lighten(@lightViolet, 5), 10, relative);
+@lightPurpleHover     : saturate(lighten(@lightPurple, 5), 10, relative);
+@lightPinkHover       : saturate(lighten(@lightPink, 5), 10, relative);
+@lightBrownHover      : saturate(lighten(@lightBrown, 5), 10, relative);
+@lightGreyHover       : saturate(lighten(@lightGrey, 5), 10, relative);
+@lightBlackHover      : saturate(lighten(@fullBlack, 5), 10, relative);
+
+/*---  Emotive  ---*/
+@positiveColorHover   : saturate(lighten(@positiveColor, 5), 10, relative);
+@negativeColorHover   : saturate(lighten(@negativeColor, 5), 10, relative);
+
+/*---  Brand   ---*/
+@facebookHoverColor   : saturate(lighten(@facebookColor, 5), 10, relative);
+@twitterHoverColor    : saturate(lighten(@twitterColor, 5), 10, relative);
+@googlePlusHoverColor : saturate(lighten(@googlePlusColor, 5), 10, relative);
+@linkedInHoverColor   : saturate(lighten(@linkedInColor, 5), 10, relative);
+@youtubeHoverColor    : saturate(lighten(@youtubeColor, 5), 10, relative);
+@instagramHoverColor  : saturate(lighten(@instagramColor, 5), 10, relative);
+@pinterestHoverColor  : saturate(lighten(@pinterestColor, 5), 10, relative);
+@vkHoverColor         : saturate(lighten(@vkColor, 5), 10, relative);

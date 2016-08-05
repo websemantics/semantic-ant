@@ -44,6 +44,11 @@ body.pushable> .pusher {
     z-index: 0;
     background: #ececec!important;
 }
+
+/*--------------
+  Markdown Styles
+---------------*/
+
 .markdown h1 {
     font-size: 28px;
     color: #404040;
@@ -58,6 +63,9 @@ body.pushable> .pusher {
   Global Styles
 ---------------*/
 
+.hidden {
+    display: none;
+}
 .ui.grid {
     width: 100%;
 }
@@ -98,15 +106,28 @@ body.pushable> .pusher {
     position: fixed;
     right: 3%;
 }
+.overlay .ui.menu {
+    box-shadow: none;
+}
 .overlay .ui.labeled.icon.menu a.item {
-  font-size: 10px!important;
-  min-width: 5em;
-  color: #666;
+    font-size: 10px!important;
+    min-width: 5em;
+    color: #666;
 }
 .overlay .ui.labeled.icon.menu a.item.active,
 .overlay .ui.labeled.icon.menu a.item:hover {
-  color: #2db7f5!important;
+    color: #2db7f5!important;
+    background-color: #34BDB2!important;
 }
+.overlay .ui.labeled.icon.menu a.item.active:first-child,
+.overlay .ui.labeled.icon.menu a.item:hover:first-child {
+    background-color: #2DB7F5!important;
+}
+.overlay .ui.labeled.icon.menu a.item:hover[rel="antd"] svg path,
+.overlay .ui.labeled.icon.menu a.item.active[rel="antd"] svg path {
+    fill: #FFFFFF;
+}
+
 /*--------------
    Page Header
 ---------------*/
@@ -116,13 +137,14 @@ body.pushable> .pusher {
     height: 80px;
 }
 .page.header .icon.item.logo span {
+    color: #2db7f5;
     font-size: 16px;
     font-family: 'Raleway', 'Hiragino Sans GB', sans-serif;
     line-height: 80px;
     text-transform: uppercase;
 }
 .page.header .icon.item.logo img {
-    width: 40px;
+    width: 32px;
     line-height: 80px;
     margin-right: 8px;
 }
@@ -184,7 +206,7 @@ body.pushable> .pusher {
 .page.content .vertical.pointing.menu {
     width: 100%;
 }
-.page.content .vertical.pointing.menu .item:hover, .page.content .vertical.pointing.menu .active.item {
+.page.content .vertical.pointing.menu .item:hover {
     background-color: #eaf8fe!important;
     -webkit-transition: background-color .4s ease;
     transition: background-color .4s ease;
@@ -227,6 +249,32 @@ body.pushable> .pusher {
 }
 
 /*******************************
+          Sidebar CSS
+*******************************/
+
+.ui.sidebar img.logo {
+    width: 100%;
+    padding: 30px;
+}
+.ui.sidebar {
+    background-color: #FFFFFF;
+    padding: 1em;
+}
+.ui.sidebar .button+ .button {
+    margin-top: 0.5em;
+}
+.alternate.menu {
+    display: none;
+}
+
+/* small fix to avoid having to recenter buttons in each theme */
+
+.ui.labeled.button> .button {
+    display: flex;
+    align-items: center;
+}
+
+/*******************************
           Bragit CSS, http://websemantics.github.io/bragit/
 *******************************/
 
@@ -254,26 +302,4 @@ table.bragit {
 }
 .ui.labeled .ui.button .star.icon {
     color: #F5CC7A!important;
-}
-
-/*******************************
-          Sidebar CSS
-*******************************/
-
-.ui.sidebar {
-    background-color: #FFFFFF;
-    padding: 1em;
-}
-.ui.sidebar .button+ .button {
-    margin-top: 0.5em;
-}
-.alternate.menu {
-    display: none;
-}
-
-/* small fix to avoid having to recenter buttons in each theme */
-
-.ui.labeled.button> .button {
-    display: flex;
-    align-items: center;
 }

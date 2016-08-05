@@ -2,7 +2,13 @@
            Overrides
 *******************************/
 
-.ui.compact.icon.buttons .button,
-.ui.compact.icon.button {
-  padding: @compactVerticalPadding @compactHorizontalPadding ( @compactVerticalPadding + @shadowOffset );
+/* click effect */
+
+.ui.button.clicked:active,
+.ui.button.clicked:hover,
+.ui.button.clicked {
+  position: relative;
+  box-shadow: 0 0 0 0 @primaryColor;
+  animation: pulse 0.32s infinite cubic-bezier(0.66, 0, 0, 1);
 }
+@keyframes pulse {to {box-shadow: 0 0 0 5px rgba(45, 183, 245, 0);}}

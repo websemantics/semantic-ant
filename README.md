@@ -59,7 +59,7 @@ The [official documentation](http://semantic-ui.com/usage/theming.html) of Seman
 
 - [ ] Reset
 - [ ] Site
-- [ ] Button
+- [x] Button
 - [ ] Container
 - [ ] Divider
 - [ ] Flag
@@ -72,7 +72,8 @@ The [official documentation](http://semantic-ui.com/usage/theming.html) of Seman
 - [ ] Loader
 - [ ] Rail
 - [ ] Reveal
-- [ ] Segment
+- [x] Segment
+- [x] Code Segment [NEW]
 - [ ] Step
 - [ ] Breadcrumb
 - [ ] Form

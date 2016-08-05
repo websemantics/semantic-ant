@@ -11,7 +11,7 @@
     <link class="themable" rel="stylesheet" type="text/css" href="assets/css/ui/components/antd/transition.css">
     <link class="themable" rel="stylesheet" type="text/css" href="assets/css/ui/components/antd/checkbox.css">
     <link class="themable" rel="stylesheet" type="text/css" href="assets/css/ui/components/antd/sidebar.css">
-    <link class="themable"rel="stylesheet" rel="stylesheet" type="text/css" href="assets/css/ui/components/antd/form.css">
+    <link class="themable" rel="stylesheet" type="text/css" href="assets/css/ui/components/antd/form.css">
     <link class="themable" rel="stylesheet" type="text/css" href="assets/css/ui/components/antd/reset.css">
     <link class="themable" rel="stylesheet" type="text/css" href="assets/css/ui/components/antd/site.css">
     <link class="themable" rel="stylesheet" type="text/css" href="assets/css/ui/components/antd/breadcrumb.css">
@@ -28,9 +28,11 @@
     <link class="themable" rel="stylesheet" type="text/css" href="assets/css/ui/components/antd/message.css">
     <link class="themable" rel="stylesheet" type="text/css" href="assets/css/ui/components/antd/popup.css">
     <link class="themable" rel="stylesheet" type="text/css" href="assets/css/ui/components/antd/reveal.css">
-    <link class="themable" rel="stylesheet" type="text/css" href="assets/css/ui/components/antd/segment.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/ui/components/antd/segment.css">
     <link class="themable" rel="stylesheet" type="text/css" href="assets/css/ui/components/antd/table.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/prettify.css">
+
 </head>
 <body id="theme" class="pushable">
     <div class="page header">
@@ -39,7 +41,7 @@
           <div class="ui grid">
             <div class="three wide column">
               <a class="icon item logo" href="https://websemantics.github.io/semantic-ant/">
-                  <img src='assets/img/logo.svg'><span>Semantic Ant</span>
+                  <img src='assets/img/semantic-ant.svg'><span>Semantic Ant</span>
               </a>
             </div>
             <div class="thirteen wide column">
@@ -83,42 +85,100 @@
 
               <div class="overlay">
                 <div class="ui labeled icon vertical menu">
-                  <a class="active item theme" data-theme="antd" data-content="Ant Design Theme" data-position="left center"><img style="width:32px" src='assets/img/ant-design.svg'></a>
-                  <a class="item theme"  data-theme="default" data-content="Semantic UI Theme" data-position="left center"><img style="width:32px" src='assets/img/semantic-ui.svg'></a>
+                  <a class="active item" rel="antd" data-content="Ant Design Theme" data-position="left center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <style>
+                        .red{fill:url(#b);} .blue{fill:url(#a);} .white{fill:#FFFFFF;}
+                      </style>
+                      <linearGradient id="a" x1="-163.04" x2="-66.39" y1="70.86" y2="70.86" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-5.09782 0 0 5.09884 -369.233 -105.33)">
+                        <stop offset="0" stop-color="#47b4e0"/>
+                        <stop offset=".17" stop-color="#1588e0"/>
+                        <stop offset="1" stop-color="#6eb4e0"/>
+                      </linearGradient>
+                      <linearGradient id="b" x1="272.72" x2="307.77" y1="-373.93" y2="-373.93" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0 -5.09884 -5.09782 0 -1450.85 1735.913)">
+                        <stop offset=".03" stop-color="#f0776f"/>
+                        <stop offset=".5" stop-color="#f0656f"/>
+                        <stop offset="1" stop-color="#f0606f"/>
+                      </linearGradient>
+                      <path class="blue" d="M272.85 6.95l99.2 99.22c9.33 9.33 9.33 24.48 0 33.75-9.33 9.28-24.47 9.28-33.64 0L272.8 74.4c-9.33-9.28-24.47-9.28-33.65 0L74.4 239.1c-9.3 9.38-9.3 24.47 0 33.75l164.65 164.7c9.33 9.33 24.47 9.33 33.75 0l65.5-65.47c9.28-9.34 24.47-9.34 33.65 0 9.38 9.33 9.38 24.47 0 33.75L272.9 505c-9.33 9.33-24.47 9.33-33.65 0L7 272.85c-9.33-9.33-9.33-24.47 0-33.65L239.1 7c9.28-9.33 24.47-9.33 33.65 0z"/>
+                      <path class="red" d="M405.8 173.58c9.28-9.18 24.37-9.18 33.65 0L505 239.15c9.33 9.33 9.33 24.47 0 33.65l-65.45 65.57c-9.33 9.28-24.47 9.28-33.65 0-9.38-9.33-9.38-24.47 0-33.75l31.7-31.77c9.3-9.28 9.3-24.47 0-33.65l-31.75-31.82c-9.33-9.33-9.33-24.47 0-33.75zM255.97 331.54c41.8 0 75.55-33.8 75.55-75.57 0-41.7-33.8-75.46-75.55-75.46-41.7 0-75.44 33.78-75.44 75.48 0 41.8 33.74 75.57 75.44 75.57zm0-36.3c-21.66 0-39.25-17.54-39.25-39.27 0-21.67 17.6-39.26 39.25-39.26 21.67 0 39.26 17.6 39.26 39.28 0 21.73-17.54 39.27-39.26 39.27z"/>
+                    </svg>                  </a>
+                  <a class="item" rel="default" data-content="Semantic UI Theme" data-position="left center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path fill="#34bdb2" d="M0 0h512v512H0V0z"/>
+                      <path fill="#fff" d="M336.92 174.08c-27.03-15.68-51.03-28.02-82.42-27.47-17.96.32-33.38 10.08-36.62 27.95-3.02 16.62 11.76 25.84 27.13 31.5 25.5 9.4 47.7 19.3 72.75 29.74 45.54 18.97 68.9 49.7 66.13 89.13-3.52 50.18-33.7 86.16-81.7 98.03-62.7 15.5-123.6-8.1-175.05-41.08 12.98-19.78 28.05-33.3 40.96-52.95 29.7 12.65 53.06 29.75 84.16 32.4 21.92 1.9 46.77.85 51.7-24.9 4.43-23.23-15.78-35.68-35.5-42.63-23.46-8.28-46.9-18.4-69.9-27.8-42.55-17.4-59.86-51.38-56.95-91.42 0-23.48 19.5-70.93 67.25-85.7 73.4-22.67 113.82.55 167.03 34.75-14.13 18.7-25 31.98-38.96 50.45"/>
+                    </svg>
+                  </a>
                 </div>
               </div>
-
-              semantic-ui.svg
-
               <h1>Button</h1>
               <p>The default buttons</p>
               <h1>Code Demo</h1>
               <div class="ui two column grid">
                 <div class="column">
                   <div class="ui segment">
-
-                    <button class="ui primary tiny button">
+                    <button class="ui primary small button">
                       Primary
                     </button>
-                    <button class="ui tiny button">
+                    <button class="ui small default button">
                       Default
                     </button>
-                    <button class="ui ghost tiny button">
+                    <div class="ui small basic button">
                       Ghost
-                    </button>
-                    <button class="ui dashed tiny button">
-                      Dashed
-                    </button>
-                    <button class="ui disabled tiny button">
-                      Disabled
-                    </button>
-
+                    </div>
                   </div>
                 </div>
                 <div class="column">
-                  <div class="ui segment">
-                  Second Column
+                  <div class="ui code segment">
+                    <div class="content">
+                      <div>
+                        <button class="ui small circular primary icon button">
+                          <i class="search icon"></i>
+                        </button>
+                        <button class="ui small primary button">
+                          <i class="search icon"></i>
+                          Search for
+                        </button>
+                        <br/><br/>
+                        <button class="ui small circular basic icon button">
+                          <i class="search icon"></i>
+                        </button>
+                        <button class="ui small basic button">
+                          <i class="search icon"></i>
+                          Search
+                        </button>
+                      </div>
+                    </div>
+                    <div class="meta markdown">
+                      <div class="title"><i class="tag icon"></i><a href="#">Title</a></div>
+                      <div>When you need embedded within , you can set properties directly or use within the component.ButtonIconiconButtonIcon
+                        <br/><br/>
+                        If you want to control specific location, you can only directly
+                      </div>
+                      <i class="collapse icon arrow circle outline right" unselectable="none"></i>
+                    </div>
+                    <div class="highlight wrapper">
+                      <div class="highlight">
+                      <pre class="prettyprint">
+      import { Button } from 'antd';
+
+      ReactDOM.render(
+      &lt;div&gt;
+        &lt;Button type=&quot;primary&quot;&gt;Primary&lt;/Button&gt;
+        &lt;Button&gt;Default&lt;/Button&gt;
+        &lt;Button type=&quot;ghost&quot;&gt;Ghost&lt;/Button&gt;
+        &lt;Button type=&quot;dashed&quot;&gt;Dashed&lt;/Button&gt;
+      &lt;/div&gt;
+      mountNode
+      )
+                      </pre>
+                    </div>
+                   </div>
                   </div>
+
+
+
+
                 </div>
               </div>
               <br/><br/><br/><br/><br/><br/><br/><br/><br/>
@@ -174,27 +234,27 @@
       </div>
   </div>
   <div class="ui left push sidebar">
-      <div class="ui form">
-          <a href="https://websemantics.github.io/semantic-ant/">
-              <img src='assets/img/logo.svg'>
-          </a>
-          <table class="bragit">
-            <tr>
-              <td>
-                <a class="ui labeled fluid tiny button github-websemantics-semantic-ant-stars">
-                    <div class="ui bragit tiny button"> <i class="star icon"></i> Stars </div>
-                    <div class="ui basic bragit left pointing label"> <i class="spinner loading icon"></i> </div>
-                </a>
-              </td>
-              <td>
-                <a class="ui bragit fluid tiny button github-websemantics-semantic-ant-github"> <i class="github icon"></i> Github </a>
-              </td>
-            </tr>
-          </table>
-          <p><a href="https://websemantics.github.io/semantic-ant//">Semantic Ant</a> is a custom theme for building beautiful modern Web apps with the combined awesomeness of <a href="http://www.semantic-ui.com">Semantic UI</a> framework and the elegant
-              minimal styles of <a href="http://ant.design">Ant Design</a> for beautiful and responsive layouts</p>
-          <p>This page demonstrates a number of Semantic-UI components themed as Ant Design.</p>
-          <div class="ui hidden divider"></div>
+        <a href="https://websemantics.github.io/semantic-ant/">
+            <img class="logo" src='assets/img/semantic-ant.svg'>
+        </a>
+        <table class="bragit">
+          <tr>
+            <td>
+              <a class="ui labeled fluid tiny button github-websemantics-semantic-ant-stars">
+                  <div class="ui bragit tiny button"> <i class="star icon"></i> Stars </div>
+                  <div class="ui basic bragit left pointing label"> <i class="spinner loading icon"></i> </div>
+              </a>
+            </td>
+            <td>
+              <a class="ui bragit fluid tiny button github-websemantics-semantic-ant-github"> <i class="github icon"></i> Github </a>
+            </td>
+          </tr>
+        </table>
+        <p><a href="https://websemantics.github.io/semantic-ant//">Semantic Ant</a> is a custom theme for building beautiful modern Web apps with the combined awesomeness of <a href="http://www.semantic-ui.com">Semantic UI</a> framework and the elegant
+            minimal styles of <a href="http://ant.design">Ant Design</a> for beautiful and responsive layouts</p>
+        <p>This page demonstrates a number of Semantic-UI components themed as Ant Design.</p>
+        <div class="ui hidden divider"></div>
+        <div class="ui form">
           <div class="field">
             <label>Theme</label>
             <p>Change the current theme</p>
@@ -213,6 +273,7 @@
   <script src="assets/js/vendor/jquery.js"></script>
   <script src="assets/js/vendor/bragit.js"></script>
   <script src="assets/css/ui/semantic.min.js"></script>
+  <script src="assets/js/vendor/prettify.min.js"></script>
   <script src="assets/js/index.js"></script>
 </body>
 </html>
