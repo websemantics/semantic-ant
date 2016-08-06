@@ -33,7 +33,7 @@
             -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
         }
-        .highlight.wrapper {
+        .highlight {
             max-height: 500px;
             opacity: 1;
         }
@@ -100,15 +100,13 @@
             }
         }
     }
-    .highlight.wrapper {
+    .highlight {
         max-height: 0;
         opacity: 0;
         overflow: auto;
+        padding: 0 10px;
         border-radius: 0 0 6px 6px;
         -webkit-transition: all .4s ease;
         transition: all .4s ease;
-        .highlight {
-            line-height: 1.5;
-        }
     }
 }

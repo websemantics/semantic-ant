@@ -1,7 +1,7 @@
 {
   "name": "semantic-ant",
   "version": "1.0.0",
-  "description": "Ant Design inspired theme for Semantic-ui",
+  "description": "Ant Design inspired theme for Semantic-UI",
   "homepage": "https://github.com/websemantics/semantic-ant",
   "main": "index.js",
   "private": true,
@@ -45,6 +45,12 @@
   ],
   "devDependencies": {},
   "dependencies": {
+    "bragit": "*",
+    "gitters": "*",
+    "google-code-prettify": "^1.0.1",
+    "handlebars": "*",
+    "jquery": "^1.11.3",
+    "masonry-plus": "*",
     "semantic-ui": "^2.1.8"
   }
 }

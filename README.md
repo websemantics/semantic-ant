@@ -38,13 +38,18 @@ Firs install all npm modules
 npm i
 ```
 
-To build the theme
+To build
 
 ```bash
 npm run build
 ```
 
-For development run `watch` Gulp task (default)
+This will compile two themes, the default Semantic-UI theme `default` and Semantic-Ant theme `antd`. The generated styles are stored at `assets/css/ui/antd` and `assets/css/ui/default`.
+
+To achieve this double (or more) builds, the `build` script in `package.json` works behind–the–scenes
+to generate two distinct `theme.config` & `semantic.json` copies per build. The template for these are stored in `templates` folder
+
+Finally if you'd like to make changes in development mode, run the `watch` Gulp task.
 
 ```bash
 npm run watch
@@ -58,7 +63,7 @@ The [official documentation](http://semantic-ui.com/usage/theming.html) of Seman
 ### Progress
 
 - [ ] Reset
-- [ ] Site
+- [x] Site
 - [x] Button
 - [ ] Container
 - [ ] Divider

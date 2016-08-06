@@ -29,12 +29,20 @@
     <link class="themable" rel="stylesheet" type="text/css" href="assets/css/ui/components/antd/popup.css">
     <link class="themable" rel="stylesheet" type="text/css" href="assets/css/ui/components/antd/reveal.css">
     <link rel="stylesheet" type="text/css" href="assets/css/ui/components/antd/segment.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/ui/components/antd/dimmer.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/ui/components/antd/loader.css">
     <link class="themable" rel="stylesheet" type="text/css" href="assets/css/ui/components/antd/table.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <link rel="stylesheet" type="text/css" href="assets/css/prettify.css">
 
+
 </head>
 <body id="theme" class="pushable">
+  <div class="ui active page loading dimmer">
+    <div class="ui text loader">
+      <img src='assets/img/semantic-ant.svg'><div>SEMANTIC ANT</div>
+    </div>
+  </div>
     <div class="page header">
       <div class="ui borderless main menu">
         <div class="ui container">
@@ -82,7 +90,6 @@
           </div>
           <div class="thirteen wide column">
             <div class="ui container">
-
               <div class="overlay">
                 <div class="ui labeled icon vertical menu">
                   <a class="active item" rel="antd" data-content="Ant Design Theme" data-position="left center">
@@ -114,81 +121,8 @@
               <h1>Button</h1>
               <p>The default buttons</p>
               <h1>Code Demo</h1>
-              <div class="ui two column grid">
-                <div class="column">
-                  <div class="ui segment">
-                    <button class="ui primary small button">
-                      Primary
-                    </button>
-                    <button class="ui small default button">
-                      Default
-                    </button>
-                    <div class="ui small basic button">
-                      Ghost
-                    </div>
-                  </div>
-                </div>
-                <div class="column">
-                  <div class="ui code segment">
-                    <div class="content">
-                      <div>
-                        <button class="ui small circular primary icon button">
-                          <i class="search icon"></i>
-                        </button>
-                        <button class="ui small primary button">
-                          <i class="search icon"></i>
-                          Search for
-                        </button>
-                        <br/><br/>
-                        <button class="ui small circular basic icon button">
-                          <i class="search icon"></i>
-                        </button>
-                        <button class="ui small basic button">
-                          <i class="search icon"></i>
-                          Search
-                        </button>
-                      </div>
-                    </div>
-                    <div class="meta markdown">
-                      <div class="title"><i class="tag icon"></i><a href="#">Title</a></div>
-                      <div>When you need embedded within , you can set properties directly or use within the component.ButtonIconiconButtonIcon
-                        <br/><br/>
-                        If you want to control specific location, you can only directly
-                      </div>
-                      <i class="collapse icon arrow circle outline right" unselectable="none"></i>
-                    </div>
-                    <div class="highlight wrapper">
-                      <div class="highlight">
-                      <pre class="prettyprint">
-      import { Button } from 'antd';
-
-      ReactDOM.render(
-      &lt;div&gt;
-        &lt;Button type=&quot;primary&quot;&gt;Primary&lt;/Button&gt;
-        &lt;Button&gt;Default&lt;/Button&gt;
-        &lt;Button type=&quot;ghost&quot;&gt;Ghost&lt;/Button&gt;
-        &lt;Button type=&quot;dashed&quot;&gt;Dashed&lt;/Button&gt;
-      &lt;/div&gt;
-      mountNode
-      )
-                      </pre>
-                    </div>
-                   </div>
-                  </div>
-
-
-
-
-                </div>
+              <div id="content"  class="page masonry" >
               </div>
-              <br/><br/><br/><br/><br/><br/><br/><br/><br/>
-              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
             </div>
           </div>
         </div>
@@ -270,10 +204,16 @@
           </div>
       </div>
   </div>
-  <script src="assets/js/vendor/jquery.js"></script>
-  <script src="assets/js/vendor/bragit.js"></script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bragit/bragit.js"></script>
+  <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+  <script src="node_modules/masonry-layout/dist/masonry.pkgd.min.js"></script>
+  <script src="node_modules/masonry-plus/masonry-plus.js"></script>
+  <script src="node_modules/base-64/base64.js"></script>
+  <script src="node_modules/larder/larder.js"></script>
+  <script src="node_modules/gitters/gitters.js"></script>
+  <script src="node_modules/google-code-prettify/bin/prettify.min.js"></script>
   <script src="assets/css/ui/semantic.min.js"></script>
-  <script src="assets/js/vendor/prettify.min.js"></script>
   <script src="assets/js/index.js"></script>
 </body>
 </html>

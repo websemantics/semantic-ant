@@ -1,5 +1,6 @@
-/dist
-/assets/css/ui
+/npm-debug.log
 /node_modules
-npm-debug.log
+/dist
+/tmp
+/assets/css/ui
 .DS_Store

@@ -1,4 +1,8 @@
-0.1.0
+1.0.0
 date: 2016-08-02
 changes:
 - Initial work on the home page
+- Development of docs page styles
+- Apply site-wide styles from Ant-Design
+- Progress on Button and Icons
+- Implement Code-Box using Segment component

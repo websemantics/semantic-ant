@@ -29,7 +29,6 @@
 
 /* Links */
 @linkColor: @primaryColor;
-@linkHoverColor: @linkColor;
 @linkHoverUnderline: underline;
 
 /* Borders */

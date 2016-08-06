@@ -33,7 +33,6 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 body {
-    line-height: 1.5;
     color: #666;
     font-size: 14px;
 }
@@ -114,18 +113,42 @@ body.pushable> .pusher {
     min-width: 5em;
     color: #666;
 }
-.overlay .ui.labeled.icon.menu a.item.active,
-.overlay .ui.labeled.icon.menu a.item:hover {
+.overlay .ui.labeled.icon.menu a.item.active, .overlay .ui.labeled.icon.menu a.item:hover {
     color: #2db7f5!important;
     background-color: #34BDB2!important;
 }
-.overlay .ui.labeled.icon.menu a.item.active:first-child,
-.overlay .ui.labeled.icon.menu a.item:hover:first-child {
+.overlay .ui.labeled.icon.menu a.item.active:first-child, .overlay .ui.labeled.icon.menu a.item:hover:first-child {
     background-color: #2DB7F5!important;
 }
-.overlay .ui.labeled.icon.menu a.item:hover[rel="antd"] svg path,
-.overlay .ui.labeled.icon.menu a.item.active[rel="antd"] svg path {
+.overlay .ui.labeled.icon.menu a.item:hover[rel="antd"] svg path, .overlay .ui.labeled.icon.menu a.item.active[rel="antd"] svg path {
     fill: #FFFFFF;
+}
+
+/*--------------
+   Page Loading
+---------------*/
+
+.ui.active.page.loading.dimmer {
+    background-color: #FFFFFF;
+}
+.ui.active.page.loading.dimmer img {
+    width: 64px;
+    display: inline-block;
+    margin-bottom: 15px;
+    animation: loadingLogo linear infinite 2s;
+}
+.ui.active.page.loading.dimmer div:first-child {
+    color: #2db7f5;
+    font-size: 18px;
+    font-weight: normal;
+}
+@keyframes loadingLogo {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /*--------------
@@ -196,12 +219,12 @@ body.pushable> .pusher {
 
 .page.content {
     background: #fff;
-    overflow: hidden;
+    overflow: auto;
     position: relative;
     width: 92%;
     margin: 24px auto;
     border-radius: 6px;
-    padding: 24px 0 0;
+    padding: 24px 0 48px 0;
 }
 .page.content .vertical.pointing.menu {
     width: 100%;
@@ -272,6 +295,22 @@ body.pushable> .pusher {
 .ui.labeled.button> .button {
     display: flex;
     align-items: center;
+}
+
+/*******************************
+          Masonry
+*******************************/
+
+.page.masonry {
+  padding-bottom: 500px;
+  margin-right: -2em;
+}
+.masonry .brick {
+    width: calc(50% - 2em)!important;
+    margin: 1em 2em 1em 0em!important;
+}
+.masonry.force-one .brick {
+    width: calc(100%)!important;
 }
 
 /*******************************
