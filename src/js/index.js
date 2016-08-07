@@ -17,13 +17,15 @@
  *                                                                            \          \
  */
 
- window.jQuery = window.$ = require('jquery')
- window.Bragit = require('bragit')
- window.Handlebars = require('handlebars')
- window.Masonry = require('masonry-plus')
- window.Gitters = require('gitters')
- require('google-code-prettify/bin/prettify.min')
- require('semantic-ui/dist/semantic.min')
+window.jQuery = window.$ = require('jquery')
+window.Bragit = require('bragit')
+window.Handlebars = require('handlebars')
+window.Masonry = require('masonry-plus')
+window.Gitters = require('gitters')
+window.Markdown = require('markdown').markdown
+
+require('google-code-prettify/bin/prettify.min')
+require('semantic-ui/dist/semantic.min')
 
 /* tuen off Bragit styles autoload */
 Bragit.defaults({
@@ -34,7 +36,6 @@ Bragit.defaults({
 Gitters.defaults({
     clearOnStart: false
 })
-
 var repo = 'websemantics/semantic-ant'
 var masonry = null
 var templates = ['<div class="ui code brick segment"  data-filter="{{id}}">\
@@ -47,8 +48,7 @@ var templates = ['<div class="ui code brick segment"  data-filter="{{id}}">\
                     <div class="highlight wrapper">\
                     <pre class="highlight prettyprint lang-{{lang}}">{{content}}</pre>\
                    </div>\
-                  </div>','<div data-filter="{{id}}" class="ui {{color}} inverted tiny basic button">{{title}}</div>'
-]
+                  </div>', '<div data-filter="{{id}}" class="ui {{color}} inverted tiny basic button">{{title}}</div>']
 
 var template = Handlebars.compile(templates[0])
 var button = Handlebars.compile(templates[1])
@@ -120,10 +120,25 @@ $(document)
                 return file.path
             }), function(jsFiles) {
 
-              onCheatsLoad()
-                // for (i in jsFiles) {
-                //     console.log(jsFiles[i].content)
-                // }
+                for (i in jsFiles) {
+
+                    var content = Markdown.toHTML(jsFiles[i].content)
+
+                    var doc = {
+                        id: jsFiles[i].name.slice(0, -4),
+                        title: jsFiles[i].name,
+                        content: jsFiles[i].content,
+                        meta: 'When you need embedded within , you can set properties directly or use within the component.ButtonIconiconButtonIcon\
+                      <br/><br/>If you want to control specific location, you can only directly',
+                        lang: 'html'
+                    }
+
+                    $('#content').append(template(doc))
+
+                    // $('.filter').append(button(cheat))
+
+                }
+                onCheatsLoad()
             })
         })
     })
@@ -183,9 +198,7 @@ function onCheatsLoad() {
             var box = $(this).closest(".ui.code.segment")
             box.toggleClass("expand");
             setTimeout(function() {
-                masonry.layout({
-                    shuffle: true
-                })
+                masonry.layout()
             }, 400);
         })
 

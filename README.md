@@ -49,10 +49,16 @@ This will compile two themes, the default Semantic-UI theme `default` and Semant
 To achieve this double (or more) builds, the `build` script in `package.json` works behind–the–scenes
 to generate two distinct `theme.config` & `semantic.json` copies per build. The template for these are stored in `templates` folder
 
-If you'd like to make changes in development mode, run the `watch` Gulp task.
+If you'd like to make changes in development mode, run the `watch` Gulp task for css,
 
 ```bash
 npm run watch
+```
+
+For Javascript development,
+
+```bash
+npm run watch:js
 ```
 
 Finally, if you make changes to Javascript code, here's how to build js files,
