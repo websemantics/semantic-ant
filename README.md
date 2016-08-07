@@ -49,11 +49,18 @@ This will compile two themes, the default Semantic-UI theme `default` and Semant
 To achieve this double (or more) builds, the `build` script in `package.json` works behind–the–scenes
 to generate two distinct `theme.config` & `semantic.json` copies per build. The template for these are stored in `templates` folder
 
-Finally if you'd like to make changes in development mode, run the `watch` Gulp task.
+If you'd like to make changes in development mode, run the `watch` Gulp task.
 
 ```bash
 npm run watch
 ```
+
+Finally, if you make changes to Javascript code, here's how to build js files,
+
+```bash
+npm run build:js
+```
+
 
 
 ## Theming
@@ -78,7 +85,7 @@ The [official documentation](http://semantic-ui.com/usage/theming.html) of Seman
 - [ ] Rail
 - [ ] Reveal
 - [x] Segment
-- [x] Code Segment [NEW]
+- [x] Code Segment :new:
 - [ ] Step
 - [ ] Breadcrumb
 - [ ] Form

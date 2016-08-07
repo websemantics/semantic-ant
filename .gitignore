@@ -3,4 +3,5 @@
 /dist
 /tmp
 /assets/css/ui
+/assets/js/index.min.js
 .DS_Store

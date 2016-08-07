@@ -17,6 +17,14 @@
  *                                                                            \          \
  */
 
+ window.jQuery = window.$ = require('jquery')
+ window.Bragit = require('bragit')
+ window.Handlebars = require('handlebars')
+ window.Masonry = require('masonry-plus')
+ window.Gitters = require('gitters')
+ require('google-code-prettify/bin/prettify.min')
+ require('semantic-ui/dist/semantic.min')
+
 /* tuen off Bragit styles autoload */
 Bragit.defaults({
     css: {
@@ -27,8 +35,7 @@ Gitters.defaults({
     clearOnStart: false
 })
 
-var config = 'config.json'
-var url = 'docs/'
+var repo = 'websemantics/semantic-ant'
 var masonry = null
 var templates = ['<div class="ui code brick segment"  data-filter="{{id}}">\
                     <div class="content">{{{content}}}</div>\
@@ -40,18 +47,11 @@ var templates = ['<div class="ui code brick segment"  data-filter="{{id}}">\
                     <div class="highlight wrapper">\
                     <pre class="highlight prettyprint lang-{{lang}}">{{content}}</pre>\
                    </div>\
-                  </div>',
-    '<div data-filter="{{id}}" class="ui {{color}} inverted tiny basic button">{{title}}</div>',
-    '<a class="ui labeled mini button github-{{repository}}-stars">\
-                        <div class="ui  mini button"> <i class="star icon"></i> Stars </div>\
-                        <div class="ui basic  left pointing label"> <i class="spinner loading icon"></i> </div>\
-                    </a>\
-                    <a class="ui  mini button github-{{repository}}-github"> <i class="github icon"></i> Github </a>'
+                  </div>','<div data-filter="{{id}}" class="ui {{color}} inverted tiny basic button">{{title}}</div>'
 ]
 
 var template = Handlebars.compile(templates[0])
 var button = Handlebars.compile(templates[1])
-var bragit = Handlebars.compile(templates[2])
 
 $(document)
     .ready(function() {
@@ -115,13 +115,15 @@ $(document)
 
 
         /* Read docs */
-        Gitters.fetch('websemantics/semantic-ant', 'docs', function(files) {
-            Gitters.fetch('websemantics/semantic-ant', files.map(function(file) {
+        Gitters.fetch(repo, 'docs', function(files) {
+            Gitters.fetch(repo, files.map(function(file) {
                 return file.path
-            }), 'master', function(jsFiles) {
-                for (i in jsFiles) {
-                    console.log(jsFiles[i].content)
-                }
+            }), function(jsFiles) {
+
+              onCheatsLoad()
+                // for (i in jsFiles) {
+                //     console.log(jsFiles[i].content)
+                // }
             })
         })
     })
