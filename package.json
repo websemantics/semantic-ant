@@ -64,6 +64,7 @@
     "jquery": "^1.11.3",
     "markdown": "^0.5.0",
     "masonry-plus": "*",
+    "prismjs": "^1.5.1",
     "semantic-ui": "^2.1.8"
   }
 }

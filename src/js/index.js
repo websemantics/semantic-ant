@@ -23,9 +23,8 @@ window.Handlebars = require('handlebars')
 window.Masonry = require('masonry-plus')
 window.Gitters = require('gitters')
 window.Markdown = require('markdown').markdown
-
-require('google-code-prettify/bin/prettify.min')
-require('semantic-ui/dist/semantic.min')
+window.Prism = require('prismjs')
+window.Ssemantic = require('semantic-ui/dist/semantic.min')
 
 /* tuen off Bragit styles autoload */
 Bragit.defaults({
@@ -46,7 +45,7 @@ var templates = ['<div class="ui code brick segment"  data-filter="{{id}}">\
                       <i class="collapse icon arrow circle outline right" unselectable="none"></i>\
                     </div>\
                     <div class="highlight wrapper">\
-                    <pre class="highlight prettyprint lang-{{lang}}">{{content}}</pre>\
+                    <pre><code class="language-{{lang}}">{{{html}}}</code></pre>\
                    </div>\
                   </div>', '<div data-filter="{{id}}" class="ui {{color}} inverted tiny basic button">{{title}}</div>']
 
@@ -128,6 +127,7 @@ $(document)
                         id: jsFiles[i].name.slice(0, -4),
                         title: jsFiles[i].name,
                         content: jsFiles[i].content,
+                        html: Prism.highlight(jsFiles[i].content, Prism.languages.html),
                         meta: 'When you need embedded within , you can set properties directly or use within the component.ButtonIconiconButtonIcon\
                       <br/><br/>If you want to control specific location, you can only directly',
                         lang: 'html'
@@ -136,6 +136,10 @@ $(document)
                     $('#content').append(template(doc))
 
                     // $('.filter').append(button(cheat))
+
+
+                    // var code = "var data = 1;";
+                    // var html = Prism.highlight(code, Prism.languages.javascript);
 
                 }
                 onCheatsLoad()
@@ -214,6 +218,4 @@ function onCheatsLoad() {
         })
 
     $('.ui.active.page.loading.dimmer').remove()
-    prettyPrint()
-
 }
