@@ -115,7 +115,7 @@ $(document)
 
 
         /* Read docs */
-        Gitters.fetch(repo, 'docs', function(files) {
+        Gitters.fetch(repo, 'src/docs', function(files) {
             Gitters.fetch(repo, files.map(function(file) {
                 return file.path
             }), function(jsFiles) {
