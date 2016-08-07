@@ -34,7 +34,7 @@ Bragit.defaults({
     }
 })
 Gitters.defaults({
-    clearOnStart: false
+    clearOnStart: true
 })
 var repo = 'websemantics/semantic-ant'
 var masonry = null
