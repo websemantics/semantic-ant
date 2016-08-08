@@ -59,7 +59,6 @@
   "dependencies": {
     "bragit": "*",
     "gitters": "*",
-    "google-code-prettify": "^1.0.1",
     "handlebars": "*",
     "jquery": "^1.11.3",
     "markdown": "^0.5.0",

@@ -1,3 +1,7 @@
+There are 4 kinds of Alert: `success`, `info`, `warning`, `error`.
+
+
+```html
 <div class="ui warning message">
   <i class="close icon"></i>
   <div class="header">
@@ -29,3 +33,4 @@
   </div>
   <p>That offer has expired
 </p></div>
+```

@@ -112,6 +112,15 @@ $(document)
                 }
             }).dropdown('set selected', 'antd')
 
+        onCheatsLoad()
+
+        /* Read docs */
+        Gitters.fetch(repo, 'docs/README.md', function(file) {
+          console.log(file)
+        })
+
+
+        return
 
         /* Read docs */
         Gitters.fetch(repo, 'src/docs', function(files) {
