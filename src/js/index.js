@@ -33,9 +33,13 @@ Bragit.defaults({
     }
 })
 Gitters.defaults({
-    clearOnStart: true
+    clearOnStart: false,
 })
-var repo = 'websemantics/semantic-ant'
+var docs = {
+    repo: 'websemantics/semantic-ant',
+    url: 'docs/',
+    content: {}
+}
 var masonry = null
 var templates = ['<div class="ui code brick segment"  data-filter="{{id}}">\
                     <div class="content">{{{content}}}</div>\
@@ -112,13 +116,8 @@ $(document)
                 }
             }).dropdown('set selected', 'antd')
 
-        onCheatsLoad()
 
-        /* Read docs */
-        Gitters.fetch(repo, 'docs/README.md', function(file) {
-          console.log(file)
-        })
-
+        loadDocs('README.md')
 
         return
 
@@ -151,10 +150,68 @@ $(document)
                     // var html = Prism.highlight(code, Prism.languages.javascript);
 
                 }
-                onCheatsLoad()
+                pageRefresh()
             })
         })
     })
+
+
+/**
+ * Load docs resources and update the UI
+ *
+ * @param {resource} string, the resource releative url
+ * @param {parent} string, the resource's parent releative url
+ * @return {void}
+ */
+
+function loadDocs(url, parent) {
+
+  Gitters.fetch(docs.repo, docs.url + url, function(file) {
+      var content = parseDocs(file.content, parent)
+      $('#content').append(content)
+
+  })
+
+  pageRefresh()
+}
+
+/**
+ * Parse the docs and adjust Ui
+ *
+ * @param {markdown} string, the markdown content
+ * @return {void}
+ */
+
+function parseDocs(markdown, parent) {
+
+  var html = ''
+
+  /* Missing parent marks the head of docs */
+  if(parent === undefined){
+
+
+    // Parse the markdown into a tree
+    // var tree = Markdown.parse( markdown )
+    //
+    // var summery = false
+    // tree.forEach(function(item, index){
+    //   if(typeof item === 'object' && item[0] === 'header' && item[2] === 'Summary') {
+    //     summery = true
+    //   }
+    //   if(summery && parseInt(index) > 0){
+    //     console.log('Getting these ' + index)
+    //   }
+    // })
+
+    // console.log( markdown.substring(markdown.indexOf('#Summary'), markdown.length))
+    // tree = Markdown.parse( markdown.substring(markdown.indexOf('#Summary'), markdown.length))
+  } else {
+    html = Markdown.renderJsonML(Markdown.toHTMLTree( tree ))
+  }
+
+  return html
+}
+
 
 /**
  * Change Theme.
@@ -188,7 +245,7 @@ function changeTheme(theme) {
  *
  * @return {void}
  */
-function onCheatsLoad() {
+function pageRefresh() {
 
     $('.toc .ui.sticky').sticky({
         ontext: $('.pusher > .full.height')
