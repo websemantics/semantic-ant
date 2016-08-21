@@ -22,9 +22,8 @@ window.Bragit = require('bragit')
 window.Handlebars = require('handlebars')
 window.Masonry = require('masonry-plus')
 window.Gitters = require('gitters')
-window.Markdown = require('markdown').markdown
 window.Prism = require('prismjs')
-window.Ssemantic = require('semantic-ui/dist/semantic.min')
+window.Semantic = require('semantic-ui/dist/semantic.min')
 
 /* tuen off Bragit styles autoload */
 Bragit.defaults({
