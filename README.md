@@ -156,3 +156,9 @@ This project uses and is heavily inspired by the following projects
 [Ant Design](http://ant.design/), an enterprise-class UI design language and React-based implementation.
 
 [Recreating GitHub](https://github.com/Semantic-Org/example-github), A Semantic UI project designed to showcase theming with examples to create a packaged theme, using component CSS overrides, and managing themes with `theme.config`.
+
+
+## License
+
+[MIT license](http://opensource.org/licenses/mit-license.php)
+Copyright (c) Web Semantics, Inc.
