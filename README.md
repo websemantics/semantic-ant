@@ -25,7 +25,7 @@
 
 [![Build Status](https://travis-ci.org/websemantics/semantic-ant.svg?branch=master)](https://travis-ci.org/websemantics/semantic-ant)
 
-[Semantic Ant](http://websemantics.github.io/semantic-ant) is a custom theme for building beautiful modern Web apps with the combined awesomeness of [Semantic-ui](http://semantic-ui.com/) framework and the elegant minimal styles of [Ant Design](http://ant.design/) for beautiful and responsive layouts</p>
+[Semantic Ant](http://websemantics.github.io/semantic-ant) is a custom theme for building beautiful modern Web apps with the combined awesomeness of [Semantic-UI](http://semantic-ui.com/) framework and the elegant minimal styles of [Ant Design](http://ant.design/) for beautiful and responsive layouts</p>
 
 ### [Live demo](http://websemantics.github.io/semantic-ant/)
 
@@ -70,7 +70,8 @@ npm run build:js
 
 ## Theming
 
-The [official documentation](http://semantic-ui.com/usage/theming.html) of Semantic-ui is a great resource that explains with examples how to work with themes.
+The [official documentation](http://semantic-ui.com/usage/theming.html) of Semantic-UI is a great resource that explains with examples how to work with themes. More information about the Semantic-Ant framework and its components can be found in the [documentation section](/docs).
+
 
 ### Progress
 
@@ -123,11 +124,6 @@ The [official documentation](http://semantic-ui.com/usage/theming.html) of Seman
 - [ ] Form
 - [ ] State
 - [ ] Visibility
-
-
-## Documentation
-
-More information about the Semantic-Ant framework and its components can be found in the [documentation section](/docs).
 
 
 ## Support
