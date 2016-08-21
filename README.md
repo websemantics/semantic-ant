@@ -68,7 +68,6 @@ npm run build:js
 ```
 
 
-
 ## Theming
 
 The [official documentation](http://semantic-ui.com/usage/theming.html) of Semantic-ui is a great resource that explains with examples how to work with themes.
@@ -126,14 +125,21 @@ The [official documentation](http://semantic-ui.com/usage/theming.html) of Seman
 - [ ] Visibility
 
 
-## documentation
+## Documentation
 
 More information about the Semantic-Ant framework and its components can be found in the [documentation section](/docs).
 
 
+## Support
+
+Need help or have a question? post a questions at [StackOverflow](https://stackoverflow.com/questions/tagged/semantic-ant)
+
+*Please don't use the issue trackers for support/questions.*
+
+
 ## Contributions
 
-This project is in development and your contributions are always welcome!
+This project is in development but we are more than happy to accept external contributions to the project in the form of feedback, bug reports and even better - pull requests :)
 
 
 ## Related
