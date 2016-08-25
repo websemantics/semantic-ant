@@ -24,6 +24,8 @@ window.Masonry = require('masonry-plus')
 window.Gitters = require('gitters')
 window.Prism = require('prismjs')
 window.Semantic = require('semantic-ui/dist/semantic.min')
+window.parse = require('markdown-html-ast').parse
+window._ = require("underscore.string")
 
 /* tuen off Bragit styles autoload */
 Bragit.defaults({
@@ -31,29 +33,17 @@ Bragit.defaults({
         ignore: true
     }
 })
+
+/* setup the Gitters package to maintain cache on start */
 Gitters.defaults({
     clearOnStart: false,
 })
-var docs = {
-    repo: 'websemantics/semantic-ant',
-    url: 'docs/',
-    content: {}
-}
-var masonry = null
-var templates = ['<div class="ui code brick segment"  data-filter="{{id}}">\
-                    <div class="content">{{{content}}}</div>\
-                    <div class="meta markdown">\
-                      <div class="title"><i class="tag icon"></i><a href="#">{{title}}</a></div>\
-                      <div>{{meta}}</div>\
-                      <i class="collapse icon arrow circle outline right" unselectable="none"></i>\
-                    </div>\
-                    <div class="highlight wrapper">\
-                    <pre><code class="language-{{lang}}">{{{html}}}</code></pre>\
-                   </div>\
-                  </div>', '<div data-filter="{{id}}" class="ui {{color}} inverted tiny basic button">{{title}}</div>']
 
-var template = Handlebars.compile(templates[0])
-var button = Handlebars.compile(templates[1])
+var repo = 'websemantics/semantic-ant'
+var currentTheme = 'antd'
+var masonry = null
+var template = Handlebars.compile($("#box-template").html())
+var button = Handlebars.compile($("#button-template").html())
 
 $(document)
     .ready(function() {
@@ -69,7 +59,7 @@ $(document)
                 },
                 variation: 'inverted',
                 position: 'top center'
-            });
+            })
 
         $('.ui.main.menu').visibility({
             once: false,
@@ -82,7 +72,8 @@ $(document)
 
         $('.ui.menu .ui.dropdown').dropdown({
             on: 'hover'
-        });
+        })
+
         $('.ui.menu a.item')
             .on('click', function() {
                 $(this)
@@ -97,7 +88,11 @@ $(document)
         })
 
         $('.overlay a.item').click(function() {
-            changeTheme($(this).attr('rel'))
+
+            if ($(this).attr('rel') !== currentTheme) {
+                changeTheme($(this).attr('rel'))
+            }
+
             return false
         })
 
@@ -116,9 +111,81 @@ $(document)
             }).dropdown('set selected', 'antd')
 
 
-        loadDocs('README.md')
+        var doc = {
+            id: 'id123',
+            title: 'There is a title',
+            content: '<button class="ui primary small button">Primary</button><button class="ui small default button">Default</button><button class="ui small basic button">Ghost</button>',
+            html: Prism.highlight('<button class="ui primary small button">Primary</button>\
+<button class="ui small default button">Default</button>\
+<button class="ui small basic button">Ghost</button>', Prism.languages.html),
+            meta: 'When you need embedded within , you can set properties directly or use within the component.ButtonIconiconButtonIcon\
+          <br/><br/>If you want to control specific location, you can only directly',
+            lang: 'html'
+        }
+
+        $('#content').append(template(doc))
+
+        pageRefresh()
 
         return
+
+        /* load docs */
+        Gitters.fetch(repo, 'docs/README.md', function(file) {
+
+            var elements = parse(file.content).children,
+                summary
+
+            elements.forEach(function(item, index, elements) {
+
+                /* mark the summary section, and parse all the relevent headings */
+                if (summary = summary ? summary : item.element === 'h1' && item.value === 'Summary') {
+
+                    if (item.element === 'h2') {
+
+                        console.log(item)
+
+                        //
+                        //   var code = elements[index + 1]
+                        //
+                        //   var data = {
+                        //     id: _.underscored(item.value),
+                        //     title: item.value,
+                        //     icon : icon,
+                        //     lang: code.language,
+                        //     color: colors[index % 13],
+                        //     content: Prism.highlight(code.value, Prism.languages[code.language])
+                        //   }
+                        //
+                        //   $('#content').append(segment(data))
+                        //   $('.filter').append(button(data))
+                    }
+
+
+                }
+            })
+
+            setTimeout(pageRefresh, 300)
+        })
+
+
+        return
+
+
+        var doc = {
+            id: 'id123',
+            title: 'There is a title',
+            content: '<button class="ui primary small button">Primary</button><button class="ui small default button">Default</button><button class="ui small basic button">Ghost</button>',
+            html: Prism.highlight('<button class="ui primary small button">Primary</button><button class="ui small default button">Default</button><button class="ui small basic button">Ghost</button>', Prism.languages.html),
+            meta: 'When you need embedded within , you can set properties directly or use within the component.ButtonIconiconButtonIcon\
+          <br/><br/>If you want to control specific location, you can only directly',
+            lang: 'html'
+        }
+
+        $('#content').append(template(doc))
+
+        pageRefresh()
+
+
 
         /* Read docs */
         Gitters.fetch(repo, 'src/docs', function(files) {
@@ -145,8 +212,8 @@ $(document)
                     // $('.filter').append(button(cheat))
 
 
-                    // var code = "var data = 1;";
-                    // var html = Prism.highlight(code, Prism.languages.javascript);
+                    // var code = "var data = 1"
+                    // var html = Prism.highlight(code, Prism.languages.javascript)
 
                 }
                 pageRefresh()
@@ -154,83 +221,23 @@ $(document)
         })
     })
 
-
 /**
- * Load docs resources and update the UI
+ * Change Theme dynamically by changing url of all themable link elements in index.html header
  *
- * @param {resource} string, the resource releative url
- * @param {parent} string, the resource's parent releative url
- * @return {void}
- */
-
-function loadDocs(url, parent) {
-
-  Gitters.fetch(docs.repo, docs.url + url, function(file) {
-      var content = parseDocs(file.content, parent)
-      $('#content').append(content)
-
-  })
-
-  pageRefresh()
-}
-
-/**
- * Parse the docs and adjust Ui
- *
- * @param {markdown} string, the markdown content
- * @return {void}
- */
-
-function parseDocs(markdown, parent) {
-
-  var html = ''
-
-  /* Missing parent marks the head of docs */
-  if(parent === undefined){
-
-
-    // Parse the markdown into a tree
-    // var tree = Markdown.parse( markdown )
-    //
-    // var summery = false
-    // tree.forEach(function(item, index){
-    //   if(typeof item === 'object' && item[0] === 'header' && item[2] === 'Summary') {
-    //     summery = true
-    //   }
-    //   if(summery && parseInt(index) > 0){
-    //     console.log('Getting these ' + index)
-    //   }
-    // })
-
-    // console.log( markdown.substring(markdown.indexOf('#Summary'), markdown.length))
-    // tree = Markdown.parse( markdown.substring(markdown.indexOf('#Summary'), markdown.length))
-  } else {
-    html = Markdown.renderJsonML(Markdown.toHTMLTree( tree ))
-  }
-
-  return html
-}
-
-
-/**
- * Change Theme.
- *
- * @param {theme} string, theme name (antd, default)
+ * @param {theme} string, theme name ('antd' or 'default')
  * @return {void}
  */
 
 function changeTheme(theme) {
+
+    currentTheme = theme
 
     var regExp = /(\/components\/).*(\/[a-z]*.css)/
     $.each($('link.themable'), function() {
         $(this).attr('href', $(this).attr('href').replace(regExp, '$1' + theme + '$2'))
     })
 
-    /* activate theme links */
-    $('.overlay a.item').removeClass('active')
-    $('.overlay a.item[rel="' + theme + '"]').addClass('active')
-
-    /* set drop down too */
+    /* set drop down to the selected theme, in case it changed from the overlay selector */
     $('.ui.sidebar .dropdown').dropdown('set selected', theme)
 
     if (masonry) {
@@ -240,46 +247,39 @@ function changeTheme(theme) {
 
 
 /**
- * Called when all cheat files are fully loaded
+ * Called when all doc files are fully loaded
  *
  * @return {void}
  */
 function pageRefresh() {
 
-    $('.toc .ui.sticky').sticky({
-        ontext: $('.pusher > .full.height')
-    })
-
-    $('#slider').sidebar('attach events', '.launch.button, .view-ui, .launch.item')
-        .sidebar('setting', {
-            dimPage: false
-        })
+    /* layout code boxes */
 
     masonry = new Masonry('.masonry', {
         'itemSelector': '.brick',
         columnWidth: '.brick'
     })
 
-    /* code boxes */
+    /* enable code boxes interactivity */
 
     $('.ui.code.segment .collapse')
         .on('click', function() {
             var box = $(this).closest(".ui.code.segment")
-            box.toggleClass("expand");
+            box.toggleClass("expand")
             setTimeout(function() {
                 masonry.layout()
-            }, 400);
+            }, 400)
         })
 
-    /* button click effect */
+    /* enable ant design button click effect */
 
     $('.ui.button')
         .on('click', function() {
             var button = $(this)
-            button.addClass('clicked');
+            button.addClass('clicked')
             setTimeout(function() {
                 button.removeClass('clicked')
-            }, 320);
+            }, 320)
         })
 
     $('.ui.active.page.loading.dimmer').remove()

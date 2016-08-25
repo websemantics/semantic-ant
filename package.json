@@ -62,6 +62,7 @@
     "handlebars": "*",
     "jquery": "^1.11.3",
     "markdown-html-ast": "*",
+    "underscore.string": "*",
     "masonry-plus": "*",
     "prismjs": "*",
     "semantic-ui": "*"
