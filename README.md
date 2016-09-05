@@ -21,7 +21,10 @@
                     ___]  |___  |  |  |  |  | \|   |   |  |___        |  |  | \|   |  
                     
                               
-                              ░░░░░░▒▒▒▓▓█ WORK IN PROGRESS █▓▓▒▒▒░░░░░░
+                              
+           ░░░░░░░░░░▒▒▒▒▒▒▒▓▓▓▓▓███ W O R K   I N   P R O G R E S S  ███▓▓▓▓▓▒▒▒▒▒▒░░░░░░░░░░░
+                              
+                              
 ```
 
 > [Ant Design](http://ant.design/) inspired theme for [Semantic-UI](http://semantic-ui.com/)
